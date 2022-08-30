@@ -1,5 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
-Route::inertia('/', 'HomeComponent');
+Route::get(
+    '/',
+    function () {
+        return Inertia::render(
+            'Home',
+            [
+                'title' => 'Homepage',
+            ]
+        );
+    }
+)->name( 'homepage' );
