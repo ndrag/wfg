@@ -18,7 +18,7 @@ phases:
   build:
     commands: 
     # Back-end build step.
-    - Building front-end assets...
+    - echo Building front-end assets...
     - npm run prod
     - echo Installing composer...
     - composer install
@@ -38,3 +38,8 @@ phases:
       - echo Pushing the Docker image...
       - docker image ls -a
       - docker push $REPOSITORY_URI:$IMAGE_TAG
+artifacts:
+   files:
+         - '**/*'
+   discard-paths: no
+   base-directory: dist
