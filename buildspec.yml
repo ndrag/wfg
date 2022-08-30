@@ -6,8 +6,8 @@ phases:
       php: 8.0
       nodejs: 12
   pre_build:
-      - npm install
-      - npm run prod
+    - npm install
+    - npm run prod
     commands:
     - echo Logging in to Amazon ECR....
     - aws --version

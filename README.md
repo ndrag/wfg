@@ -15,7 +15,7 @@ docker run --rm \
     composer install --ignore-platform-reqs --no-cache
 ```
 
-Create an alias for to shortcut `./vendor/bin/sail up` to `sail`. 
+Create an alias to shortcut `./vendor/bin/sail up` to `sail`. 
 
 * Copy `.env.example` to `.env` and set the config values accordingly.
 * Run `sail up` (or `./vendor/bin/sail up` if you haven't set an alias) to spin up the Docker environment. This will take some minutes on first run. 
