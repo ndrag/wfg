@@ -38,9 +38,9 @@ phases:
       - echo Pushing the Docker image...
       - docker image ls -a
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-  artifacts:
-    files:
-      - '**/*'
-    base-directory: base_dir
-    name: build-artifact-name
-    discard-paths: no
+artifacts:
+  files:
+    - '**/*'
+  base-directory: base_dir
+  name: build-artifact-name
+  discard-paths: no
