@@ -4,10 +4,8 @@ phases:
   install: 
     runtime-versions:
       php: 8.0
-      nodejs: 12
+      nodejs: 12.x
   pre_build:
-    - npm install
-    - npm run prod
     commands:
     - echo Logging in to Amazon ECR....
     - aws --version
@@ -15,9 +13,13 @@ phases:
     - aws ecr get-login-password --region us-west-1 | docker login --username AWS --password-stdin 618876817619.dkr.ecr.us-west-1.amazonaws.com
     - REPOSITORY_URI=618876817619.dkr.ecr.us-west-1.amazonaws.com/wfg
     - IMAGE_TAG=1.0
+    - echo Installing front-end dependencies...
+    - npm install
   build:
     commands: 
     # Back-end build step.
+    - Building front-end assets...
+    - npm run prod
     - echo Installing composer...
     - composer install
     - echo Creating .env file...
@@ -28,6 +30,7 @@ phases:
     # Build & push the Docker image. 
     - echo Building the Docker image...
     - docker build -t $REPOSITORY_URI:latest .
+    - echo Pushing the Docker image to $REPOSITORY_URI...
     - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
