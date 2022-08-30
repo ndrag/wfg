@@ -3,6 +3,6 @@
     <Head>
       <title>{{ $page.props.title }}</title>
     </Head>
-    <h1>This is: {{ $page.props.title }}</h1>
+    <h1>This is NOT: {{ $page.props.title }}</h1>
   </span>
 </template>
