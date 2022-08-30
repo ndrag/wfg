@@ -1,7 +1,7 @@
 const path = require("path");
 const mix = require("laravel-mix");
 
-// Rezolve Ziggy
+// Resolve Ziggy
 mix.alias({
     ziggy: path.resolve("vendor/tightenco/ziggy/dist/vue"),
 });
