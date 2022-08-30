@@ -15,18 +15,30 @@ phases:
   build:
     commands: 
     - echo Build started on `date`
-    - echo installing composer...
+
+    # Front-end build step.
+    - echo Installing NPM...
+    - sudo apt update
+    - sudo apt install nodejs npm
+    - npm install
+    - echo Building front-end prod files..
+    - npm run prod
+
+    # Back-end build step.
+    - echo Installing composer...
     - composer install
-    - echo creating .env file..
+    - echo Creating .env file...
     - cp .env.example .env # We're copying over our .env file, which means it'd have to have production values in it on our local. We could handle environment vars with AWS or SSH, but let's just define dev & production .env files for now.
-    - echo generating app key
+    - echo Generating app key...
     - php artisan key:generate
+
+    # Build & push the Docker image. 
     - echo Building the Docker image...
     - docker build -t $REPOSITORY_URI:latest .
     - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build completed on `date`.
       - echo Pushing the Docker image...
       - docker image ls -a
       - docker push $REPOSITORY_URI:$IMAGE_TAG
