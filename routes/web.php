@@ -9,7 +9,7 @@ Route::get(
         return Inertia::render(
             'Home',
             [
-                'title' => 'Homepage',
+                'title' => 'Works for Good',
             ]
         );
     }

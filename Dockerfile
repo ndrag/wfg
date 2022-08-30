@@ -1,3 +1,4 @@
+# Production image - not used for local development.
 # Use the official php 8.0 image with apache pre-installed & configured.
 FROM php:8.0-apache 
 
