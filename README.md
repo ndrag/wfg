@@ -15,17 +15,18 @@ docker run --rm \
     composer install --ignore-platform-reqs --no-cache
 ```
 
-* Copy `.env.example` to `.env` and set the config values accordingly. Note that `DB_HOST` must match the name of the PostgreSQL container spun up by docker - `pgsql` and that `APP_URL` should be left blank, as the site is served at `localhost`.
-* Run `sail up` (or `./vendor/bin/sail up` if you don't have an alias set up) to spin up the Docker environment. This will take some minutes on first run. 
+Create an alias for to shortcut `./vendor/bin/sail up` to `sail`. 
+
+* Copy `.env.example` to `.env` and set the config values accordingly.
+* Run `sail up` (or `./vendor/bin/sail up` if you haven't set an alias) to spin up the Docker environment. This will take some minutes on first run. 
 * Run `sail down` to safely spin down the environment as required. 
 * With sail running, run `sail artisan key:generate` to generate your own encryption key.
-* Run `sail artisan migrate --seed` to build and seed your database.
-* Run `sail yarn` to install all client-side dependencies.
-* Use `sail npm run watch-poll` to enable live-recompilation. Note that this setup does not currently work with Browsersync. 
+<!-- * Run `sail yarn` to install all client-side dependencies.
+* Use `sail npm run watch-poll` to enable live-recompilation. Note that this setup does not currently work with Browsersync.  -->
 
 ### Production Deployment
 
-Production build and deployment are handled by Amazon CodeBuild. When you push to the main branch, CodeBuild will spin up a Docker container based on your `buildspec.yml` file, build your code & image, and provide them to your AWS ecosystem. 
+Production build and deployment are handled by Amazon CodeBuild. When you push to the main branch, CodeBuild will spin up a Docker container based on your `buildspec.yml` & `Dockerfile`, build your code & image, and provide them to your AWS ecosystem. 
 
 ### DEPRECATED local development setup
 
