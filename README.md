@@ -1,13 +1,14 @@
 A simple Laravel application to be deployed as part of a first test of AWS ECR, ECS, and CodeBuild.
 
-[Following this guide](https://gbengaoni.com/blog/Deploy-a-Docker-ized-Laravel-Application-to-AWS-ECS-with-CodeBuild-4b0e388f4f53), but with modifications (e.g. PHP 8.1, not 7.3).
+[Based off the following guide](https://gbengaoni.com/blog/Deploy-a-Docker-ized-Laravel-Application-to-AWS-ECS-with-CodeBuild-4b0e388f4f53), but with modifications (e.g. PHP 8.1, not 7.3).
+## Local Development
 
-## Commands
-Build the image (i.e. after making changes to the Dockerfile):
+Build the image initially and after every change you make to the Dockerfile
 ```
 docker build -t works-for-good .
 ```
-Serve it locally:
+
+Run the following to serve the site locally at http://localhost:8001/
 ```
 docker run -it -p 8001:80 works-for-good
 ```
