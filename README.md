@@ -55,6 +55,12 @@ Production build and deployment are handled by Amazon CodeBuild. When a changes 
 
 - [Dealing with CodeBuild & front-end building with NPM](https://towardsaws.com/deploy-your-front-end-application-to-amazon-s3-using-codebuild-and-codepipeline-25c64572ffc6)
 
+- [A resource with a good diagram of the system we're using](https://stackoverflow.com/questions/44403982/aws-load-balancer-ec2-health-check-request-timed-out-failure)
+
+- [And a really good one for working with and implementing load balancers, especially with dynamic ports](https://www.youtube.com/watch?v=CRp354oWUJA)
+
+- [This one's good for dealing with CodePipeline](https://medium.com/thelorry-product-tech-data/end-to-end-cd-pipeline-amazon-ecs-deployment-using-aws-codepipeline-332b19ca2a9)
+
 <!-- 
 ### DEPRECATED local development setup
 
