@@ -1,6 +1,5 @@
 # Works for Good
-A simple homepage for the Works for Good organization intended as an AWS ecosystem practice project. 
-
+A simple homepage for the Works for Good organization (`worksforgood.io`) intended as an AWS ecosystem practice project. 
 
 ## Tech Stack
 - Laravel 8
@@ -8,7 +7,6 @@ A simple homepage for the Works for Good organization intended as an AWS ecosyst
 - Vue 3
 - Tailwind
 - Ziggy (routing)
-
 
 ## Hosting Infrastructure
 - AWS ECR
@@ -35,8 +33,11 @@ Create an alias to shortcut `./vendor/bin/sail up` to `sail`.
 * Copy `.env.example` to `.env` and set the config values accordingly.
 * Run `sail up` (or `./vendor/bin/sail up` if you haven't set an alias) to spin up the Docker environment. This will take some minutes on first run.
 * Run `sail down` to safely spin down the environment as required.
-* With sail running, run `sail artisan key:generate` to generate your own encryption key.
-* With sail running, run `sail npm install` to instal front-end dependencies.
+With the sail container running...
+* Run `sail artisan key:generate` to generate your own encryption key.
+* Run `sail npm install` to instal front-end dependencies.
+* Run `sail npm run watch-poll` to build dev assets and enable live-reloading. 
+* View the dev site at `localhost`.
 
 ## Production Deployment
 
