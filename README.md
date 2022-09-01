@@ -9,10 +9,15 @@ A simple homepage for the Works for Good organization (`worksforgood.io`) intend
 - Ziggy (routing)
 
 ## Hosting Infrastructure
-- AWS ECR
-- AWS IAM
-- AWS EC2 + ECS
-- Amazon CodeBuild (Build pipeline)
+- AWS ECR (Docker image/container registration)
+- AWS IAM (certs)
+- AWS ECS + EC2 (hosting)
+- AWS Application Load Balancer
+
+## Repo & CI/CD
+- GitHub
+- AWS CodeBuild
+- AWS CodePipeline
 
 ## Local Development
 
@@ -43,7 +48,6 @@ With the sail container running...
 
 Production build and deployment are handled by Amazon CodeBuild. When a changes is made to the main branch, CodeBuild will spin up a Docker container based on your `buildspec.yml` & `Dockerfile`, build your code & image, and provide them to your AWS ecosystem. 
 
-
 ## Useful resources
 
 - [A very useful guide to deploying a boilerplate starter Laravel application to AWS with CodeBuild, ECR, ECS (EC2), and IAM](https://gbengaoni.com/blog/Deploy-a-Docker-ized-Laravel-Application-to-AWS-ECS-with-CodeBuild-4b0e388f4f53)
@@ -62,19 +66,21 @@ Production build and deployment are handled by Amazon CodeBuild. When a changes 
 
 - [This one's good for dealing with CodePipeline](https://medium.com/thelorry-product-tech-data/end-to-end-cd-pipeline-amazon-ecs-deployment-using-aws-codepipeline-332b19ca2a9)
 
-<!-- 
-### DEPRECATED local development setup
+- [This one runs us through adding an HTTPS listener to our load balancer & diverting HTTP traffic to HTTPS](https://www.youtube.com/watch?v=JQP96EjRM98)
 
-This simple Docker dev workflow has been replaced with Laravel Sail. 
+- [A useful resource for setting up a CNAME to enable AWS SLL certificate validation](https://www.ssls.com/knowledgebase/how-can-i-complete-the-domain-control-validation-for-my-ssl-certificate/)
 
-Build the image initially and after every change you make to the Dockerfile
+- [A resource for injecting secured .env variables into EC2 buckets when the ECS task spins them up](https://www.youtube.com/watch?v=GZZpEJ3R0Lw)
+
+## Running the dev. Docker image locally
+
+- Build the image initially and after every change you make to the Dockerfile
 
 ```
 docker build -t works-for-good .
 ```
 
-Run the following to serve the site locally at http://localhost:8001/
+- Run the following to serve the site locally at http://localhost:8001/
 ```
 docker run -it -p 8001:80 works-for-good
 ```
- -->
