@@ -4,7 +4,7 @@ author: Nicholas Dragunow
 ---
 
 # Works for Good
-A simple homepage for the Works for Good organization (worksforgood.info) intended as an AWS ecosystem practice project. 
+An incredibly over-engineered homepage for the 'Works for Good' group that serves as a learning tool & playground for the AWS ecosystem.
 
 ## Tech Stack
 - Laravel 8
@@ -43,8 +43,8 @@ docker run --rm \
 Optionally, create an alias to shortcut `./vendor/bin/sail up` to `sail`. Otherwise, continue to use `./vendor/bin/sail $COMMAND` in the steps below.
 
 * Copy `.env.example` to `.env` and set the config values accordingly.
-* Run `sail up` (or `./vendor/bin/sail up` if you haven't set an alias) to spin up the Docker environment. This will take some minutes on first run.
-* Run `sail down` to safely spin down the environment as required.
+* Run `sail up` to spin up the Docker environment. This will take some minutes on first run.
+* Run `sail down` to safely spin down the container.
 
 With the sail container running:
 * Run `sail artisan key:generate` to generate your own encryption key.
@@ -70,11 +70,11 @@ Production build and deployment are handled by Amazon CodeBuild. When a changes 
 
 - [Helpful for getting a handle on the AWS patterns & architecture we're working with](https://serverlessfirst.com/deploy-high-availability-web-app-to-aws-ecs/)
 
-- [Setting up front-end Inertia with our front-end libraries (Tailwind, Vue, and Ziggy) in a new Laravel application](https://dev.to/geowrgetudor/setting-up-laravel-with-inertiajs-vuejs-tailwind-css-21pc)
+- [Setting up Inertia with our front-end libraries (Tailwind, Vue, and Ziggy) in a new Laravel application](https://dev.to/geowrgetudor/setting-up-laravel-with-inertiajs-vuejs-tailwind-css-21pc)
 
 - [Dealing with CodeBuild & front-end building with NPM](https://towardsaws.com/deploy-your-front-end-application-to-amazon-s3-using-codebuild-and-codepipeline-25c64572ffc6)
 
-- [A resource with a good diagram of the system we're using](https://stackoverflow.com/questions/44403982/aws-load-balancer-ec2-health-check-request-timed-out-failure)
+- [A resource with a good diagram of the architectural pattern we're using](https://stackoverflow.com/questions/44403982/aws-load-balancer-ec2-health-check-request-timed-out-failure)
 
 - [And a really good one for working with and implementing load balancers, especially with dynamic ports](https://www.youtube.com/watch?v=CRp354oWUJA)
 
@@ -82,11 +82,11 @@ Production build and deployment are handled by Amazon CodeBuild. When a changes 
 
 - [This one runs us through adding an HTTPS listener to our load balancer & diverting HTTP traffic to HTTPS](https://www.youtube.com/watch?v=JQP96EjRM98)
 
-- [A useful resource for setting up a CNAME to enable AWS SLL certificate validation](https://www.ssls.com/knowledgebase/how-can-i-complete-the-domain-control-validation-for-my-ssl-certificate/)
+- [A useful resource for setting up a CNAME to enable AWS SSL certificate validation](https://www.ssls.com/knowledgebase/how-can-i-complete-the-domain-control-validation-for-my-ssl-certificate/)
 
-- [A resource for injecting secured .env variables into EC2 buckets when the ECS task spins them up](https://www.youtube.com/watch?v=GZZpEJ3R0Lw)
+- [A resource for injecting secured .env variables into EC2 containers when the ECS task spins them up](https://www.youtube.com/watch?v=GZZpEJ3R0Lw)
 
-## Running the production Docker container locally
+## Running the production Docker container locally (deprecated)
 
 - Build the image initially (and on updating the Dockerfile): 
 
