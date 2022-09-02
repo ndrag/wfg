@@ -56,9 +56,11 @@ From now on you can run two commands to spin up your dev environment with change
 * Run `sail npm run watch-poll`
 * View the dev site at `localhost`.
 
+**Note: Do not push directly to the main branch! Create a release branch from main, add your feature branches, and merge it to main - at which point it'll be automatically pushed to the live server.**
+
 ## Production Deployment
 
-Production build and deployment are handled by Amazon CodeBuild. When a changes is made to the main branch, CodeBuild will spin up a Docker container based on your `buildspec.yml` & `Dockerfile`, build your code & image, and provide them to your AWS ecosystem. 
+Production build and deployment are handled by Amazon CodeBuild. When a changes is made to the main branch, CodeBuild will spin up a Docker container based on your `buildspec.yml` & `Dockerfile`, build your code & image, and provide them to your AWS ecosystem. CodePipeline will then call the ECS prod deployment service. 
 
 ## Useful resources
 
