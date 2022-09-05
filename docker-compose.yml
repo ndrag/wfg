@@ -24,6 +24,7 @@ services:
             - sail
         depends_on:
             - pgsql
+    # Note that the local database definition is pulled from your .env file when 'sail up' is first run. To reset it, deleting all data and creating a new DB with up-to-date .env variables (perhaps because you've changed your 'DB_PASSWORD' and now the connection is failing), run 'sail down -v'.
     pgsql:
         image: 'postgres:14'
         ports:
@@ -33,6 +34,7 @@ services:
             POSTGRES_DB: '${DB_DATABASE}'
             POSTGRES_USER: '${DB_USERNAME}'
             POSTGRES_PASSWORD: '${DB_PASSWORD:-secret}'
+        # Create a persistent volume such that your DB persists between sessions. 
         volumes:
             - 'sail-pgsql:/var/lib/postgresql/data'
             - './vendor/laravel/sail/database/pgsql/create-testing-database.sql:/docker-entrypoint-initdb.d/10-create-testing-database.sql'
