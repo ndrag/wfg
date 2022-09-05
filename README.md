@@ -8,6 +8,7 @@ An incredibly over-engineered homepage for the 'Works for Good' group that serve
 
 ## Tech Stack
 - Laravel 8
+- Postgres 14
 - Inertia.js
 - Vue 3
 - Tailwind
@@ -42,7 +43,7 @@ docker run --rm \
 
 Optionally, create an alias to shortcut `./vendor/bin/sail up` to `sail`. Otherwise, continue to use `./vendor/bin/sail $COMMAND` in the steps below.
 
-* Copy `.env.example` to `.env` and set the config values accordingly.
+* Copy `.env.example` to `.env` and set config values as required.
 * Run `sail up` to spin up the Docker environment. This will take some minutes on first run.
 * Run `sail down` to safely spin down the container.
 
@@ -55,6 +56,8 @@ From now on you can run two commands to spin up your dev environment with change
 * Run `sail up`
 * Run `sail npm run watch-poll`
 * View the dev site at `localhost`.
+
+* You may run `sail down -v` to delete your local postgres development db. It will be recreated fresh the next time you run `sail up`, using up to date DB credentials from your `.env` file. 
 
 **Note: Do not push directly to the main branch! Create a release branch from main, add your feature branches, and merge it to main - at which point it'll be automatically pushed to the live server.**
 
