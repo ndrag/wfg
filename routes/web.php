@@ -14,3 +14,15 @@ Route::get(
         );
     }
 )->name( 'homepage' );
+
+Route::get(
+    'env',
+    function () {
+        return Inertia::render(
+            'Env',
+            [
+                'env_vars' => $_ENV,
+            ]
+        );
+    }
+)->name( 'homepage' );
