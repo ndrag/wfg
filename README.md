@@ -17,8 +17,9 @@ An incredibly over-engineered homepage for the 'Works for Good' group that serve
 ## Hosting Infrastructure
 - AWS ECR (Docker image/container registration)
 - AWS Route 53 (registrar + DNS)
-- AWS IAM (certs)
+- AWS IAM (policies & certs)
 - AWS ECS + EC2 (hosting)
+- AWS Systems Manager (production ENV variable storage)
 - AWS Application Load Balancer (front-facing endpoint + load balancing + forcing HTTP traffic to use HTTPS)
 
 ## Repo & CI/CD
