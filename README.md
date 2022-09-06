@@ -66,6 +66,22 @@ From now on you can run two commands to spin up your dev environment with change
 
 Production build and deployment are handled by Amazon CodeBuild. When a changes is made to the main branch, CodeBuild will spin up a Docker container based on your `buildspec.yml` & `Dockerfile`, build your code & image, and provide them to your AWS ecosystem. CodePipeline will then call the ECS prod deployment service. 
 
+## SSH Access 
+
+- The production site will be running on an EC2 instance. You can SSH into any EC2 instance that has an inbound rule within its security group that allows SSH traffic on port 22 (set at the cluster level). Note that you may be rejected with a `22` error if your IP address is not specified in that inbound rule.
+
+- Ensure you have access to the appropriate private key and then find the DNS address of the EC2 instance you're interested in from  the EC2 management page. From a linux terminal, enter the following:
+
+```
+ssh -i PRIVATE_KEY.pem ec2-user@IPV6_DNS_ADDRESS_OF_EC2_INSTANCE
+```
+
+- e.g.
+
+```
+ssh -i aws_key.pem ec2-user@ec2-54-67-3-74.us-west-1.compute.amazonaws.com
+```
+
 ## Useful resources
 
 - [A very useful guide to deploying a boilerplate starter Laravel application to AWS with CodeBuild, ECR, ECS (EC2), and IAM](https://gbengaoni.com/blog/Deploy-a-Docker-ized-Laravel-Application-to-AWS-ECS-with-CodeBuild-4b0e388f4f53)
@@ -89,6 +105,11 @@ Production build and deployment are handled by Amazon CodeBuild. When a changes 
 - [A useful resource for setting up a CNAME to enable AWS SSL certificate validation](https://www.ssls.com/knowledgebase/how-can-i-complete-the-domain-control-validation-for-my-ssl-certificate/)
 
 - [A resource for injecting secured .env variables into EC2 containers when the ECS task spins them up](https://www.youtube.com/watch?v=GZZpEJ3R0Lw)
+
+
+- [Adding an inbound rule to your cluster's security group to allow SSH access](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html)
+
+- [Connect to an EC2 instance via SSH](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/instance-connect.html)
 
 ## Running the production Docker container locally (deprecated)
 
