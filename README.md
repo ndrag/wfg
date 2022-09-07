@@ -13,6 +13,7 @@ An incredibly over-engineered homepage for the 'Works for Good' group that serve
 - Vue 3
 - Tailwind
 - Ziggy (routing)
+- Sentry (error logging)
 
 ## Hosting Infrastructure
 - AWS ECR (Docker image/container registration)
