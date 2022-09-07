@@ -83,6 +83,16 @@ ssh -i PRIVATE_KEY.pem ec2-user@IPV6_DNS_ADDRESS_OF_EC2_INSTANCE
 ssh -i aws_key.pem ec2-user@ec2-54-67-3-74.us-west-1.compute.amazonaws.com
 ```
 
+## Environment variables
+
+.env.example and your own .env file are only used in development. Production environment variables are stored in AWS Systems Manager and injected into the built app container during release by the ECS production release task (wfg-prod-deployment-env-vars-specified).
+
+- To create or modify production environment variables, head to [AWS Systems Manager.](https://us-west-1.console.aws.amazon.com/systems-manager/parameters/?region=us-west-1&tab=Table)
+
+- To include new variables in the production release task, [go to the task definitions page](https://us-west-1.console.aws.amazon.com/ecs/home?region=us-west-1#/taskDefinitions), find the deployment task, create a new revision, and add the new env variable as a key/value against the image container.
+
+- You'll also need to update [the production deployment service](https://us-west-1.console.aws.amazon.com/ecs/home?region=us-west-1#/clusters/wfg-prod-cluster-two-ec2/services/wfg-prod-deployment-task/details) running on the production ECS cluster to use that new revision - otherwise it'll continue to use the older deployment task without your new or modified env variable imports.
+
 ## Useful resources
 
 - [A very useful guide to deploying a boilerplate starter Laravel application to AWS with CodeBuild, ECR, ECS (EC2), and IAM](https://gbengaoni.com/blog/Deploy-a-Docker-ized-Laravel-Application-to-AWS-ECS-with-CodeBuild-4b0e388f4f53)

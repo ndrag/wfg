@@ -17,16 +17,13 @@ phases:
     - npm install
   build:
     commands: 
-    # Back-end build step.
     - echo Building front-end assets...
     - npm run prod
-    - echo Installing composer...
+    - echo Installing composer libraries...
     - composer install
     - php artisan route:clear
     - php artisan config:clear
     - php artisan cache:clear
-    # - Running migrations & seeders...
-    # - php artisan migrate --seed
 
     # Build & push the Docker image. 
     - echo Building the Docker image...
