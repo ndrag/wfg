@@ -1,8 +1,7 @@
 <template>
   <span>
-    <Head>
-      <title>{{ $page.props.title }}</title>
-    </Head>
-    <h1>{{ $page.props.title }} now has a working CI/CD build process :)</h1>
+    <div class="h-screen w-full bg-gradient-to-r from-cyan-100 to-blue-300">
+      <h1 class="grid h-screen place-items-center text-white text-6xl">Coming Soon</h1>
+    </div>
   </span>
 </template>
