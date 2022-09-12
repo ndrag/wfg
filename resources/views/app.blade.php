@@ -16,6 +16,18 @@
     <!-- <meta property="og:description" content="Placeholder"> -->
     <!-- <meta property="og:image" content="placeholder.png"> -->
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP8MR3WZC9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YP8MR3WZC9');
+    </script>
+    
     <link rel="icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
