@@ -7,7 +7,7 @@ author: Nicholas Dragunow
 An incredibly over-engineered homepage for the 'Works for Good' group that serves as a learning tool & playground for the AWS ecosystem.
 
 ## Tech Stack
-- Laravel 8
+- Laravel 8 (AWS CodeBuild doesn't yet provide a PHP version compatible with Laravel 9)
 - Postgres 14
 - Inertia.js
 - Vue 3
