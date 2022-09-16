@@ -1,8 +1,8 @@
 import { createApp, h } from "vue";
 import { createInertiaApp, Link, Head } from "@inertiajs/inertia-vue3";
 
-import { ZiggyVue } from "./ziggy";
-import { Ziggy } from "./ziggy";
+import { ZiggyVue } from "ziggy";
+import { Ziggy } from "ziggy";
 
 createInertiaApp({
     resolve: async (name) => {
@@ -11,7 +11,8 @@ createInertiaApp({
     setup({ el, App, props, plugin }) {
         createApp({ render: () => h(App, props) })
             .use(plugin)
-            .use(ZiggyVue, Ziggy)
+            .use(ZiggyVue)
+            .use(Ziggy)
             .component("Link", Link)
             .component("Head", Head)
             .mixin({ methods: { route } })
