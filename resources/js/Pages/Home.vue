@@ -1,7 +1,51 @@
 <template>
-  <span>
-    <div class="h-screen w-full bg-gradient-to-r from-cyan-100 to-blue-300">
-      <h1 class="grid h-screen place-items-center text-white text-6xl">Coming Soon</h1>
-    </div>
-  </span>
+  <!-- Header & Logo -->
+  <section class="h-screen w-full bg-blue-100">
+    <Header/>
+  </section>
+
+  <!-- Hero section -->
+  <section>
+    <Hero/>
+  </section>
+
+  <!-- About us -->
+  <section>
+  </section>
+
+  <!-- Our processes -->
+  <section>
+  </section>
+
+  <!-- Our team -->
+  <section>
+    <Team/>
+  </section>
+
+  <!-- Technical advisors -->
+  <section>
+  </section>
+
+  <!-- Get in touch -->
+  <section>
+    <contact/>
+  </section>
+
+  <!-- Footer -->
+  <section>
+    <Footer/>
+  </section>
 </template>
+
+<script setup>
+
+import Header from '@/Layout/Header'
+import Footer from '@/Layout/Footer'
+
+import Hero from '@/Components/Sections/Hero'
+import Team from '@/Components/Sections/Team'
+import Contact from '@/Components/Sections/Contact'
+
+
+
+</script>
