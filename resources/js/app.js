@@ -1,8 +1,8 @@
 import { createApp, h } from "vue";
 import { createInertiaApp, Link, Head } from "@inertiajs/inertia-vue3";
 
-import { ZiggyVue } from "ziggy";
-import { Ziggy } from "ziggy";
+import { ZiggyVue } from "./ziggy";
+import { Ziggy } from "./ziggy";
 
 createInertiaApp({
     resolve: async (name) => {
