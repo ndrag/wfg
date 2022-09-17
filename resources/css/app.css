@@ -28,4 +28,8 @@
     .text-emphasis {
         @apply italic font-semibold text-blue-900 whitespace-nowrap;
     }
+
+    .section-body {
+        @apply min-h-screen w-full;
+    }
 }

@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-    <div class="relative overflow-hidden bg-gray-50">
+    <div class="section-body relative overflow-hidden bg-gray-50 pt-[60px]">
         <div class="hidden sm:absolute sm:inset-y-0 sm:block sm:h-full sm:w-full" aria-hidden="true">
             <div class="relative mx-auto h-full max-w-7xl">
                 <svg class="absolute right-full translate-y-1/4 translate-x-1/4 transform lg:translate-x-1/2"
@@ -28,39 +28,6 @@
 
         <div class="relative pt-6 pb-16 sm:pb-24">
             <Popover>
-                <div class="mx-auto max-w-7xl px-4 sm:px-6">
-                    <nav class="relative flex items-center justify-between sm:h-10 md:justify-center"
-                        aria-label="Global">
-                        <div class="flex flex-1 items-center md:absolute md:inset-y-0 md:left-0">
-                            <div class="flex w-full items-center justify-between md:w-auto">
-                                <a href="#">
-                                    <span class="sr-only">Your Company</span>
-                                    <img class="h-8 w-auto sm:h-10"
-                                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
-                                </a>
-                                <div class="-mr-2 flex items-center md:hidden">
-                                    <PopoverButton
-                                        class="inline-flex items-center justify-center rounded-md bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                                        <span class="sr-only">Open main menu</span>
-                                        <Bars3Icon class="h-6 w-6" aria-hidden="true" />
-                                    </PopoverButton>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hidden md:flex md:space-x-10">
-                            <a v-for="item in navigation" :key="item.name" :href="item.href"
-                                class="font-medium text-gray-500 hover:text-gray-900">{{ item.name }}</a>
-                        </div>
-                        <div class="hidden md:absolute md:inset-y-0 md:right-0 md:flex md:items-center md:justify-end">
-                            <span class="inline-flex rounded-md shadow">
-                                <a href="#"
-                                    class="inline-flex items-center rounded-md border border-transparent bg-white px-4 py-2 text-base font-medium text-indigo-600 hover:bg-gray-50">Log
-                                    in</a>
-                            </span>
-                        </div>
-                    </nav>
-                </div>
-
                 <transition enter-active-class="duration-150 ease-out" enter-from-class="opacity-0 scale-95"
                     enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in"
                     leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
@@ -124,11 +91,4 @@
 <script setup>
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-
-const navigation = [
-    { name: 'Product', href: '#' },
-    { name: 'Features', href: '#' },
-    { name: 'Marketplace', href: '#' },
-    { name: 'Company', href: '#' },
-]
 </script>

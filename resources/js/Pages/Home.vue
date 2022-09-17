@@ -1,6 +1,6 @@
 <template>
   <!-- Header & Logo -->
-  <section class="h-screen w-full bg-blue-100">
+  <section>
     <Header/>
   </section>
 
@@ -13,7 +13,7 @@
   <section>
   </section>
 
-  <!-- Our processes -->
+  <!-- Our process -->
   <section>
   </section>
 
