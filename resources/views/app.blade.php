@@ -47,5 +47,4 @@
     @inertia
 </body>
 
-
 </html>

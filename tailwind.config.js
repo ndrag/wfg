@@ -13,11 +13,14 @@ module.exports = {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],
         heading: ['Montserrat', ...defaultTheme.fontFamily.sans]
       },
-       //https://tailwindcss.com/docs/customizing-colors#curating-colors
+      //https://tailwindcss.com/docs/customizing-colors#curating-colors
       colors: {
         gray: colors.stone,
       }
     }
   },
-  plugins: [require('@tailwindcss/forms', '@tailwindcss/aspect-ratio')]
+  plugins: [require(
+    '@tailwindcss/forms',
+    '@tailwindcss/aspect-ratio'
+  )]
 }

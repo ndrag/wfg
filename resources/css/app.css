@@ -26,10 +26,14 @@
 
 @layer components {
     .text-emphasis {
-        @apply italic font-semibold text-blue-900 whitespace-nowrap;
+        @apply font-bold whitespace-nowrap;
     }
 
     .section-body {
         @apply min-h-screen w-full;
+    }
+
+    .responsive-item-spacing {
+        @apply space-x-6 md:space-x-8;
     }
 }

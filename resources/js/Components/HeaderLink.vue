@@ -1,11 +1,13 @@
 <template>
-    <Link :href="route(link)"><i class="far fa-user" /> {{ name }}</Link>
-    <span class="opacity-70">|</span>
+    <Link :href="route(href)">{{ name }}</Link>
+    <span v-if="!(index == arrayLength - 1)" class="cursor-default opacity-70">|</span>
 </template>
 
 <script setup>
 const props = defineProps({
     name: String,
-    link: String,
+    href: String,
+    index: Number,
+    arrayLength: Number,
 })
 </script>
