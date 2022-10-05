@@ -7,7 +7,7 @@ Route::get(
     '/',
     function () {
         return Inertia::render(
-            'Home',
+            'Placeholder',
             [
                 'title' => 'Works for Good',
             ]
