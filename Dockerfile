@@ -1,4 +1,4 @@
-# Production image - not used for local development.
+# Production image - not used for local development. This is used by CodeBuild to create our production image. 
 # Use the official php 8.0 image with apache pre-installed & configured.
 FROM php:8.1-apache 
 
