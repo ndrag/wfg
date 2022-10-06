@@ -1,8 +1,6 @@
 <template>
   <!-- Header & Logo -->
-  <section>
-    <Header/>
-  </section>
+  <Header/>
 
   <!-- Hero section -->
   <section>
