@@ -13,13 +13,14 @@ phases:
     - aws ecr get-login-password --region us-west-1 | docker login --username AWS --password-stdin 618876817619.dkr.ecr.us-west-1.amazonaws.com
     - REPOSITORY_URI=618876817619.dkr.ecr.us-west-1.amazonaws.com/wfg
     - IMAGE_TAG=1.0
-    - echo Installing front-end dependencies...
-    - npm install
   build:
     commands: 
+    - echo Installing front-end dependencies...
+    - npm install
     - echo Building front-end assets...
     - npm run prod
     - echo Installing composer libraries...
+    - composer dump-autoload
     - composer install
     - php artisan route:clear
     - php artisan config:clear

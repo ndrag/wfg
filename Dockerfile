@@ -7,6 +7,9 @@ LABEL maintainer="Nick Dragunow"
 # Copy everything from the current folder to /var/www/app with www-data (apache serving user) as the owning user & owning group.
 COPY --chown=www-data:www-data . /var/www/app
 
+# Copy the default production php configuration to the appropriate folder. 
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+
 # Copy our Apache vhost.conf file to the correct location.
 COPY .docker/vhost.conf /etc/apache2/sites-available/000-default.conf
 

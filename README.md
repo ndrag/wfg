@@ -67,6 +67,9 @@ From now on you can run two commands to spin up your dev environment with change
 
 Production build and deployment are handled by Amazon CodeBuild. When a changes is made to the main branch, CodeBuild will spin up a Docker container based on your `buildspec.yml` & `Dockerfile`, build your code & image, and provide them to your AWS ecosystem. CodePipeline will then call the ECS prod deployment service. 
 
+- To build the production image locally, run `docker build -t works-for-good .` from the project root.
+
+- To host locally, run `docker run -it -p 8001:80 works-for-good`.
 ## SSH Access 
 
 - The production site will be running on an EC2 instance. You can SSH into any EC2 instance that has an inbound rule within its security group that allows SSH traffic on port 22 (set at the cluster level). Note that you may be rejected with a `22` error if your IP address is not specified in that inbound rule.
