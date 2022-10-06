@@ -20,7 +20,6 @@ phases:
     - echo Building front-end assets...
     - npm run prod
     - echo Installing composer libraries...
-    - composer dump-autoload
     - composer install
     - php artisan route:clear
     - php artisan config:clear
