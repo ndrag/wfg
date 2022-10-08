@@ -4,6 +4,9 @@ author: Nicholas Dragunow
 ---
 
 # Works for Good
+
+***In early development! While the architecture is complete, the front-end has yet to be fully designed or implemented.***
+
 The homepage for Works for Good, a not-for-profit creating free web-based tools for organizations and industries that make a difference. 
 
 This site will also form the template for future Laravel + Vue (via Inertia) AWS-hosted websites. 
