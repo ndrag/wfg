@@ -61,7 +61,7 @@ From now on you can run two commands to spin up your dev environment with change
 
 * You may run `sail down -v` to delete your local postgres development db. It will be recreated fresh the next time you run `sail up`, using up to date DB credentials from your `.env` file. 
 
-**Note: Do not push directly to the main branch! Create a release branch from main, add your feature branches, and merge it to main - at which point it'll be automatically pushed to the live server.**
+**Note: Do not push directly to the main branch! Create a release branch from main, add your feature branches, and merge it to main - at which point it'll be automatically pushed to the live server. Branch protection requires a paid plan...**
 
 ## Production Deployment
 
