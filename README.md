@@ -1,11 +1,13 @@
 ---
-title: Works for Good
-author: Nicholas Dragunow
+Title: Works for Good
+Author: Nicholas Dragunow
+Status: Pre-release
 ---
+
+***In early development! While the architecture is complete, the front-end has yet to be fully designed or implemented.***
 
 # Works for Good
 
-***In early development! While the architecture is complete, the front-end has yet to be fully designed or implemented.***
 
 The homepage for Works for Good, a not-for-profit creating free web-based tools for organizations and industries that make a difference. 
 
@@ -67,9 +69,11 @@ From now on you can run two commands to spin up your dev environment with change
 
 * You may run `sail down -v` to delete your local postgres development DB. It will be recreated fresh the next time you run `sail up`, using up-to-date DB credentials from your `.env` file. 
 
-**Note: Do not push directly to the main branch! Create a release branch from main, add your feature branches, and merge that. Once merged to main, your changes will be automatically pushed to the live server. Branch protection requires a paid plan, so we've skipped it.**
 
 ## Production Deployment
+
+***Note: Do not push directly to the main branch! Create a release branch from main, add your feature branches, and merge that. Once merged to main, your changes will be automatically pushed to the live server. Branch protection requires a paid plan, so we've skipped it.***
+
 
 Production build and deployment are handled by Amazon CodeBuild. When a changes is made to the main branch, CodeBuild will spin up a Docker container based on your `buildspec.yml` & `Dockerfile`, build your code & image, and make the result accessible to your AWS ecosystem. CodePipeline will then call the ECS prod deployment service, which will publish your site to an EC2 instance. 
 
