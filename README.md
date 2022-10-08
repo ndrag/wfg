@@ -4,10 +4,12 @@ author: Nicholas Dragunow
 ---
 
 # Works for Good
-An incredibly over-engineered homepage for the 'Works for Good' group that serves as a learning tool & playground for the AWS ecosystem.
+The homepage for Works for Good, a not-for-profit creating free web-based tools for organizations and industries that make a difference. 
+
+This site will also form the template for future Laravel + Vue (via Inertia) AWS-hosted websites. 
 
 ## Tech Stack
-- Laravel 8 (AWS CodeBuild doesn't yet provide a PHP version compatible with Laravel 9)
+- Laravel  9
 - Postgres 14
 - Inertia.js
 - Vue 3
@@ -21,7 +23,7 @@ An incredibly over-engineered homepage for the 'Works for Good' group that serve
 - AWS IAM (policies & certs)
 - AWS ECS + EC2 (hosting)
 - AWS Systems Manager (production ENV variable storage)
-- AWS Application Load Balancer (front-facing endpoint + load balancing + forcing HTTP traffic to use HTTPS)
+- AWS Application Load Balancer (front-facing endpoint + load balancing)
 
 ## Repo & CI/CD
 - GitHub
@@ -31,6 +33,7 @@ An incredibly over-engineered homepage for the 'Works for Good' group that serve
 ## Local Development
 
 * *All commands should be run from the project's root.*
+* *This guide assumes you have and understand WSL2 & Docker Desktop.* 
 * If you have Composer installed, run `composer install`.
 * If not, run the following, which will download a Docker image with Composer and run the same command in that environment.
 
@@ -46,8 +49,8 @@ docker run --rm \
 Optionally, create an alias to shortcut `./vendor/bin/sail up` to `sail`. Otherwise, continue to use `./vendor/bin/sail $COMMAND` in the steps below.
 
 * Copy `.env.example` to `.env` and set config values as required.
-* Run `sail up` to spin up the Docker environment. This will take some minutes on first run.
-* Run `sail down` to safely spin down the container.
+* Run `sail up` to spin up the Docker environment. The image will be built locally on first run, which will take some time. 
+* You can run `sail down` to safely spin down the container.
 
 With the sail container running:
 * Run `sail artisan key:generate` to generate your own encryption key.
@@ -59,20 +62,20 @@ From now on you can run two commands to spin up your dev environment with change
 * Run `sail npm run watch-poll`
 * View the dev site at `localhost`.
 
-* You may run `sail down -v` to delete your local postgres development db. It will be recreated fresh the next time you run `sail up`, using up to date DB credentials from your `.env` file. 
+* You may run `sail down -v` to delete your local postgres development DB. It will be recreated fresh the next time you run `sail up`, using up-to-date DB credentials from your `.env` file. 
 
-**Note: Do not push directly to the main branch! Create a release branch from main, add your feature branches, and merge it to main - at which point it'll be automatically pushed to the live server. Branch protection requires a paid plan...**
+**Note: Do not push directly to the main branch! Create a release branch from main, add your feature branches, and merge that. Once merged to main, your changes will be automatically pushed to the live server. Branch protection requires a paid plan, so we've skipped it.**
 
 ## Production Deployment
 
-Production build and deployment are handled by Amazon CodeBuild. When a changes is made to the main branch, CodeBuild will spin up a Docker container based on your `buildspec.yml` & `Dockerfile`, build your code & image, and provide them to your AWS ecosystem. CodePipeline will then call the ECS prod deployment service. 
+Production build and deployment are handled by Amazon CodeBuild. When a changes is made to the main branch, CodeBuild will spin up a Docker container based on your `buildspec.yml` & `Dockerfile`, build your code & image, and make the result accessible to your AWS ecosystem. CodePipeline will then call the ECS prod deployment service, which will publish your site to an EC2 instance. 
 
 - To build the production image locally, run `docker build -t works-for-good .` from the project root.
 
-- To host locally, run `docker run -it -p 8001:80 works-for-good`.
+- To host locally, run `docker run -it -p 8001:80 works-for-good`. View the site at `localhost:8081`. 
 ## SSH Access 
 
-- The production site will be running on an EC2 instance. You can SSH into any EC2 instance that has an inbound rule within its security group that allows SSH traffic on port 22 (set at the cluster level). Note that you may be rejected with a `22` error if your IP address is not specified in that inbound rule.
+- The production site will be running on an EC2 instance. You can SSH into any EC2 instance that has an inbound rule within an assigned security group that allows SSH traffic on port 22. This is set at the cluster level. SSH access should only be provided to specific IP addresses, not all traffic. 
 
 - Ensure you have access to the appropriate private key and then find the DNS address of the EC2 instance you're interested in from  the EC2 management page. From a linux terminal, enter the following:
 
@@ -83,12 +86,12 @@ ssh -i PRIVATE_KEY.pem ec2-user@IPV6_DNS_ADDRESS_OF_EC2_INSTANCE
 - e.g.
 
 ```
-ssh -i aws_key.pem ec2-user@ec2-54-67-3-74.us-west-1.compute.amazonaws.com
+ssh -i aws_key.pem ec2-user@ec2-11-11-1-11.us-west-1.compute.amazonaws.com
 ```
 
 ## Environment variables
 
-.env.example and your own .env file are only used in development. Production environment variables are stored in AWS Systems Manager and injected into the built app container during release by the ECS production release task (wfg-prod-deployment-env-vars-specified).
+`.env.example` and your own `.env` file are only used in local development. Production environment variables are stored in AWS Systems Manager and injected into the built app container during release by the ECS production release task (wfg-prod-deployment-env-vars-specified).
 
 - To create or modify production environment variables, head to [AWS Systems Manager.](https://us-west-1.console.aws.amazon.com/systems-manager/parameters/?region=us-west-1&tab=Table)
 
@@ -124,16 +127,3 @@ ssh -i aws_key.pem ec2-user@ec2-54-67-3-74.us-west-1.compute.amazonaws.com
 - [Adding an inbound rule to your cluster's security group to allow SSH access](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html)
 
 - [Connect to an EC2 instance via SSH](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/instance-connect.html)
-
-## Running the production Docker container locally (deprecated)
-
-- Build the image initially (and on updating the Dockerfile): 
-
-```
-docker build -t works-for-good .
-```
-
-- And run the following to serve the site locally at http://localhost:8001/
-```
-docker run -it -p 8001:80 works-for-good
-```
