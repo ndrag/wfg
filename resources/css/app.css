@@ -36,4 +36,8 @@
     .responsive-item-spacing {
         @apply space-x-6 md:space-x-8;
     }
+
+    .header-link {
+        @apply hover:bg-gray-700 hover:text-white rounded-md;
+    }
 }
