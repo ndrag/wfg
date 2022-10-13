@@ -14,11 +14,8 @@
                 
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <div class="flex flex-shrink-0 items-center">
-                        <img class="block h-8 w-auto lg:hidden"
-                            src="/favicon.ico"
-                            alt="Works for Good" />
-                        <img class="hidden h-8 w-auto lg:block"
-                            src="/favicon.ico"
+                        <img class="block h-8 w-auto"
+                            src="/works-for-good-logo.svg"
                             alt="Works for Good" />
                     </div>
                     <div class="hidden sm:ml-6 sm:block">
