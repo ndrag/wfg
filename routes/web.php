@@ -7,7 +7,7 @@ Route::get(
     '/',
     function () {
         return Inertia::render(
-            'Placeholder',
+            env('APP_ENV', 'local') == 'local' ? 'Home' : 'Placeholder',
             [
                 'title' => 'Works for Good',
             ]

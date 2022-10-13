@@ -80,6 +80,7 @@ Production build and deployment are handled by Amazon CodeBuild. When a changes 
 - To build the production image locally, run `docker build -t works-for-good .` from the project root.
 
 - To host locally, run `docker run -it -p 8001:80 works-for-good`. View the site at `localhost:8081`. 
+
 ## SSH Access 
 
 - The production site will be running on an EC2 instance. You can SSH into any EC2 instance that has an inbound rule within an assigned security group that allows SSH traffic on port 22. This is set at the cluster level. SSH access should only be provided to specific IP addresses, not all traffic. 
