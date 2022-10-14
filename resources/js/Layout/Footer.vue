@@ -9,10 +9,12 @@
                 </a>
             </div>
 
-            <img class="h-10 w-auto mx-auto hidden sm:block" src="/images/logo/violet/wfg-logo-wide-darkest.svg"
-                alt="Works for Good" />
-            <img class="h-10 w-auto mx-auto sm:hidden" src="/images/logo/violet/wfg-logo-darkest.svg"
-                alt="Works for Good" />
+            <a href="#">
+                <img class="h-10 w-auto mx-auto hidden sm:block" src="/images/logo/violet/wfg-logo-wide-darkest.svg"
+                    alt="Works for Good" />
+                <img class="h-10 w-auto mx-auto sm:hidden" src="/images/logo/violet/wfg-logo-darkest.svg"
+                    alt="Works for Good" />
+            </a>
 
             <p class="mt-4 text-center text-base text-gray-400">&copy; {{new Date().getFullYear()}} Nick Dragunow. All
                 rights reserved.
