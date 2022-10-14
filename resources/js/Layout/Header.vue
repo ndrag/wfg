@@ -1,7 +1,8 @@
 <template>
-    <Disclosure as="nav" class="bg-gray-200 fixed w-full z-40" v-slot="{ open }">
+    <Disclosure as="nav" class="bg-gray-200 fixed w-full z-40 drop-shadow-md sm:drop-shadow-lg" v-slot="{ open }">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
+                
                 <!-- Mobile menu button-->
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                     <DisclosureButton class="header-link inline-flex items-center justify-center p-2">
@@ -11,11 +12,11 @@
                     </DisclosureButton>
                 </div>
 
-                <!-- Favicon & desktop nav -->
+                <!-- Logo & desktop nav -->
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <a class="flex flex-shrink-0 items-center" href="#">
-                        <img class="block h-8 w-auto sm:hidden" src="/images/works-for-good-logo-gray-full-text-wide-tilted.svg" alt="Works for Good" />
-                        <img class="hidden h-8 w-auto sm:block" src="/images/works-for-good-logo-gray-tilted.svg" alt="Works for Good" />
+                        <img class="block h-10 w-auto sm:hidden" src="/images/logo/violet/wfg-logo-wide-darkest.svg" alt="Works for Good" />
+                        <img class="hidden h-10 w-auto sm:block" src="/images/logo/violet/wfg-logo-darkest.svg" alt="Works for Good" />
                     </a>
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
@@ -26,7 +27,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
