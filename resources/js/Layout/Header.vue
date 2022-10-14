@@ -21,7 +21,7 @@
                     </div>
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
-                            <a v-for="item in navigation" :key="item.name" :href="item.href"
+                            <a v-for="item in navigation" :key="item.name" :href="'#' + item.id"
                                 class="header-link px-3 py-2 text-sm font-medium">
                                 {{item.name }}
                             </a>
@@ -35,7 +35,7 @@
         <!-- Mobile panel -->
         <DisclosurePanel class="sm:hidden">
             <div class="space-y-1 px-2 pt-2 pb-3">
-                <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href"
+                <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="'#' + item.id"
                     class="header-link block px-3 py-2 text-base font-medium">
                     {{ item.name }}</DisclosureButton>
             </div>
@@ -49,11 +49,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 import HeaderLink from "@/Components/HeaderLink"
 
-const navigation = [
-    { name: 'About', href: '' },
-    { name: 'Our process', href: '' },
-    { name: 'Team', href: '' },
-    { name: 'Advisors', href: '' },
-    { name: 'Contact us', href: '' },
-]
+const props = defineProps({
+    navigation: Array,
+})
 </script>

@@ -40,4 +40,9 @@
     .header-link {
         @apply hover:bg-gray-700 hover:text-white rounded-md;
     }
+
+    /* Offset section anchors by 4rem to allow for the height of the navbar. */
+    .offset-section-anchor {
+        @apply relative -top-16;
+    }
 }

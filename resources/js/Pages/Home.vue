@@ -1,37 +1,37 @@
 <template>
   <!-- Header & Logo -->
-  <Header/>
+  <Header :navigation="sections" />
 
   <!-- Hero section -->
   <section>
-    <Hero/>
+    <div :id="sections[0].id"></div>
+    <Hero />
   </section>
-
+  
   <!-- About us -->
   <section>
+    <!-- <div class="section-anchor" :id="sections[1].id"></div> -->
   </section>
-
-  <!-- Our process -->
-  <section>
-  </section>
-
+  
   <!-- Our team -->
   <section>
-    <Team/>
+    <div class="offset-section-anchor" :id="sections[2].id"></div>
+    <Team />
   </section>
-
+  
   <!-- Technical advisors -->
   <section>
   </section>
-
+  
   <!-- Get in touch -->
   <section>
-    <contact/>
+    <div class="offset-section-anchor" :id="sections[4].id"></div>
+    <contact />
   </section>
 
   <!-- Footer -->
   <section>
-    <Footer/>
+    <Footer />
   </section>
 </template>
 
@@ -44,6 +44,12 @@ import Hero from '@/Components/Sections/Hero'
 import Team from '@/Components/Sections/Team'
 import Contact from '@/Components/Sections/Contact'
 
-
+const sections = [
+  { name: 'About', id: 'about' },
+  { name: 'Our process', id: 'process' },
+  { name: 'Team', id: 'team' },
+  { name: 'Advisors', id: 'advisors' },
+  { name: 'Contact us', id: 'contact' },
+]
 
 </script>
