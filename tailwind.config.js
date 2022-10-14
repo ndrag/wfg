@@ -16,6 +16,8 @@ module.exports = {
       //https://tailwindcss.com/docs/customizing-colors#curating-colors
       colors: {
         gray: colors.stone,
+        'wfg-violet': '#9c2eb7',
+        'wfg-blue': '#59b4e9',
       }
     }
   },

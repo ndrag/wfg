@@ -1,5 +1,5 @@
 <template>
-    <div class="section-body flex justify-center items-center bg-[#59b4e9] bg-gradient-to-b from-[#9c2eb7] pt-16">
+    <div class="section-body flex justify-center items-center bg-wfg-blue bg-gradient-to-b from-wfg-violet pt-16">
 
         <div class="relative pt-6 pb-16 sm:pb-24">
             <main class="mx-auto max-w-7xl px-4 sm:mt-24">
