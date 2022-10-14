@@ -14,11 +14,11 @@
                 
                 <!-- Favicon & desktop nav -->
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                    <div class="flex flex-shrink-0 items-center">
+                    <a class="flex flex-shrink-0 items-center" href="#">
                         <img class="block h-8 w-auto"
                             src="/works-for-good-logo-gray.svg"
                             alt="Works for Good" />
-                    </div>
+                    </a>
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
                             <a v-for="item in navigation" :key="item.name" :href="'#' + item.id"
