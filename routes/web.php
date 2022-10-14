@@ -14,3 +14,15 @@ Route::get(
         );
     }
 )->name( 'homepage' );
+
+Route::get(
+    '/development-view',
+    function () {
+        return Inertia::render(
+            'Home',
+            [
+                'title' => 'Works for Good',
+            ]
+        );
+    }
+)->name( 'dev' );
