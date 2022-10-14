@@ -21,9 +21,10 @@ phases:
     - npm run prod
     - echo Installing composer libraries...
     - composer install
-    - php artisan route:clear
+    - php artisan config:cache
     - php artisan config:clear
     - php artisan cache:clear
+    - php artisan route:clear
 
     # Build & push the Docker image. 
     - echo Building the Docker image...

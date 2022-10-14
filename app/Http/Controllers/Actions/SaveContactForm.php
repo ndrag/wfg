@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Actions;
 
+use App\Mail\ContactFormSubmission;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\ContactPostRequest;
-use App\Mail\ContactFormSubmission;
 
 class SaveContactForm extends Controller
 {
@@ -19,8 +20,8 @@ class SaveContactForm extends Controller
     public function __invoke(ContactPostRequest $request)
     {
         Mail::to(env('MAIL_TO_ADDRESS'), 'Admin')
-            ->queue(new ContactFormSubmission($request->all()));
+            ->send(new ContactFormSubmission($request->all()));
         
-        return redirect()->route( route: 'homepage');
+        return Redirect::back();
     }
 }
