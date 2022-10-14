@@ -14,8 +14,8 @@
                 <!-- Favicon & desktop nav -->
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <a class="flex flex-shrink-0 items-center" href="#">
-                        <img class="block h-8 w-auto sm:hidden" src="/works-for-good-logo-gray-full-text-wide.svg" alt="Works for Good" />
-                        <img class="hidden h-8 w-auto sm:block" src="/works-for-good-logo-gray.svg" alt="Works for Good" />
+                        <img class="block h-8 w-auto sm:hidden" src="/images/works-for-good-logo-gray-full-text-wide-tilted.svg" alt="Works for Good" />
+                        <img class="hidden h-8 w-auto sm:block" src="/images/works-for-good-logo-gray-tilted.svg" alt="Works for Good" />
                     </a>
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
