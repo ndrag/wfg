@@ -45,4 +45,13 @@
     .offset-section-anchor {
         @apply relative -top-16;
     }
+
+    .wfg-form-field {
+        @apply block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-wfg-violet focus:ring-wfg-violet;
+    }
+
+    .wfg-button {
+        @apply items-center justify-center rounded-md bg-wfg-blue bg-gradient-to-b from-wfg-violet py-4 text-white text-xl  opacity-80 hover:opacity-100;
+    }
+
 }

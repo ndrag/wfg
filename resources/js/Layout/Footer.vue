@@ -1,13 +1,6 @@
 <template>
-    <footer class="bg-white">
+    <footer class="bg-gray-700 bg-gradient-to-t from-gray-800">
         <div class="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
-
-            <div class="mt-4 mb-4 flex justify-center space-x-6">
-                <a class="text-gray-400 hover:text-gray-500" href="https://github.com/ndrag/wfg">
-                    <span class="sr-only">GitHub</span>
-                    <component :is="GitHubIcon" class="h-6 w-6" aria-hidden="true" />
-                </a>
-            </div>
 
             <a href="#">
                 <img class="h-10 w-auto mx-auto hidden sm:block" src="/images/logo/violet/wfg-logo-wide-darkest.svg"
@@ -16,9 +9,16 @@
                     alt="Works for Good" />
             </a>
 
-            <p class="mt-4 text-center text-base text-gray-400">&copy; {{new Date().getFullYear()}} Nick Dragunow. All
+            <p class="mt-4 text-center text-base text-gray-400">&copy; {{new Date().getFullYear()}} Works for Good. All
                 rights reserved.
             </p>
+
+            <div class="mt-4 mb-4 flex justify-center space-x-6">
+                <a class="text-gray-400 hover:text-gray-200" href="https://github.com/ndrag/wfg">
+                    <span class="sr-only">GitHub</span>
+                    <component :is="GitHubIcon" class="h-6 w-6" aria-hidden="true" />
+                </a>
+            </div>
 
         </div>
     </footer>
