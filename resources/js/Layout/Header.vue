@@ -4,20 +4,18 @@
             <div class="relative flex h-16 items-center justify-between">
                 <!-- Mobile menu button-->
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                    <DisclosureButton
-                        class="header-link inline-flex items-center justify-center p-2">
+                    <DisclosureButton class="header-link inline-flex items-center justify-center p-2">
                         <span class="sr-only">Open main menu</span>
                         <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
                         <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
                     </DisclosureButton>
                 </div>
-                
+
                 <!-- Favicon & desktop nav -->
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <a class="flex flex-shrink-0 items-center" href="#">
-                        <img class="block h-8 w-auto"
-                            src="/works-for-good-logo-gray.svg"
-                            alt="Works for Good" />
+                        <img class="block h-8 w-auto sm:hidden" src="/works-for-good-logo-gray-full-text-wide.svg" alt="Works for Good" />
+                        <img class="hidden h-8 w-auto sm:block" src="/works-for-good-logo-gray.svg" alt="Works for Good" />
                     </a>
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
