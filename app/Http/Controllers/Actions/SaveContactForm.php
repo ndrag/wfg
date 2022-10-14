@@ -18,8 +18,6 @@ class SaveContactForm extends Controller
      */
     public function __invoke(ContactPostRequest $request)
     {
-        dd($request);
-        // dd($request->validated());
-        // return redirect()->route( route: 'homepage');
+        return redirect()->route( route: 'homepage');
     }
 }

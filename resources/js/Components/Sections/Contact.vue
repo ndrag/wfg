@@ -7,12 +7,13 @@
             </div>
 
             <div class="mt-12">
-                <form @submit.prevent="submitContactForm" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                <form @submit.prevent="submitContactForm" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+                    :class="{ 'opacity-50' : submitted }">
                     <div>
                         <label for="first-name" class="block text-sm font-medium">First name</label>
                         <div class="mt-1">
                             <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                                class="wfg-form-field" v-model="form.first_name"
+                                class="wfg-form-field" :disabled="submitted" v-model="form.first_name"
                                 :class="{ 'ring-2 ring-red-500' : form.errors.first_name }" />
                             <div v-if="form.errors.first_name" class="mt-1 text-red-500">{{ form.errors.first_name }}
                             </div>
@@ -22,7 +23,7 @@
                         <label for="last-name" class="block text-sm font-medium">Last name</label>
                         <div class="mt-1">
                             <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                                class="wfg-form-field" v-model="form.last_name"
+                                class="wfg-form-field" :disabled="submitted" v-model="form.last_name"
                                 :class="{ 'ring-2 ring-red-500' : form.errors.last_name }" />
                             <div v-if="form.errors.last_name" class="mt-1 text-red-500">{{ form.errors.last_name }}
                             </div>
@@ -32,7 +33,8 @@
                         <label for="email" class="block text-sm font-medium">Email</label>
                         <div class="mt-1">
                             <input id="email" name="email" type="email" autocomplete="email" class="wfg-form-field"
-                                v-model="form.email" :class="{ 'ring-2 ring-red-500' : form.errors.email }" />
+                                :disabled="submitted" v-model="form.email"
+                                :class="{ 'ring-2 ring-red-500' : form.errors.email }" />
                             <div v-if="form.errors.email" class="mt-1 text-red-500">{{ form.errors.email }}</div>
                         </div>
                     </div>
@@ -40,14 +42,15 @@
                     <div class="sm:col-span-2">
                         <label for="message" class="block text-sm font-medium">Message</label>
                         <div class="mt-1">
-                            <textarea id="message" name="message" rows="4" class="wfg-form-field" v-model="form.message"
-                                :class="{ 'ring-2 ring-red-500' : form.errors.message }" />
+                            <textarea id="message" name="message" rows="4" class="wfg-form-field" :disabled="submitted"
+                                v-model="form.message" :class="{ 'ring-2 ring-red-500' : form.errors.message }" />
                             <div v-if="form.errors.message" class="mt-1 text-red-500">{{ form.errors.message }}</div>
                         </div>
                     </div>
                     <div class="sm:col-span-2">
                         <VueRecaptcha id="recaptcha" :sitekey=siteKey :load-recaptcha-script="true"
-                            @verify="canSubmit=true" @expired="canSubmit=false"></VueRecaptcha>
+                            @verify="canSubmit=true" @expired="canSubmit=false" :class="{ 'opacity-50' : submitted }">
+                        </VueRecaptcha>
                     </div>
                     <div class="sm:col-span-2">
                         <button type="submit" :disabled="form.processing || submitted || !canSubmit"
@@ -76,6 +79,7 @@
 import { ref } from 'vue'
 import { useForm } from '@inertiajs/inertia-vue3'
 import { VueRecaptcha } from 'vue-recaptcha'
+import Swal from 'sweetalert2'
 
 const siteKey = '6Lcz7H8iAAAAAN0eSjhOjSFKFa6FR3zmR3UU1iyb'
 
@@ -95,15 +99,18 @@ const submitContactForm = () => {
     form.post(route('save-contact-form'), {
         preserveScroll: true,
         onSuccess: () => {
-            submitted.value = true 
-            form.defaults()
-            contactButtonString.value = "Submitted"
+            submitted.value = true
+            Swal.fire(
+                'Success!',
+                'Your message has been received.',
+                'success'
+            )
+            contactButtonString.value = "Message Sent"
         },
         onError: () => {
             contactButtonString.value = "Submit"
         }
     })
 }
-
 
 </script>
