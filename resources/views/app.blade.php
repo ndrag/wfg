@@ -7,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Works for Good</title>
-    <!-- <meta name="description" content="Placeholder"> -->
+    <meta name="description" content="Works for Good is a collection of volunteer software professionals who build websites for free where you help us find the need.">
     <meta name="author" content="Nick Dragunow">
-
-    <meta property="og:title" content="Works for Good">
+    <meta property="og:title" content="works for good">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.worksforgood.info">
-    <!-- <meta property="og:description" content="Placeholder"> -->
-    <!-- <meta property="og:image" content="placeholder.png"> -->
+    <meta property="og:description" content="Works for Good is a collection of volunteer software professionals who build websites for free where you help us find the need."> -->
+    <meta property="og:image" content="/images/logo/violet/wfg-logo-darkest.svg">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP8MR3WZC9"></script>
     <script>
@@ -27,7 +26,15 @@
 
         gtag('config', 'G-YP8MR3WZC9');
     </script>
-    
+
+    <script>
+        const onloadCallback = function() {
+            console.log("reCAPTCHA has loaded!");
+            grecaptcha.reset();
+        };
+    </script>
+    <script async src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"></script>
+
     <link rel="icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
