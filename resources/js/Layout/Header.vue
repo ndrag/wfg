@@ -4,7 +4,7 @@
             <div class="relative flex h-16 items-center justify-between">
                 
                 <!-- Mobile menu button-->
-                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden text-gray-200">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden text-white">
                     <DisclosureButton class="header-link inline-flex items-center justify-center p-2">
                         <span class="sr-only">Open main menu</span>
                         <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
@@ -18,7 +18,7 @@
                         <img class="block h-10 w-auto sm:hidden" src="/images/logo/violet/wfg-logo-wide-darkest.svg" alt="Works for Good" />
                         <img class="hidden h-10 w-auto sm:block" src="/images/logo/violet/wfg-logo-darkest.svg" alt="Works for Good" />
                     </a>
-                    <div class="hidden sm:ml-6 sm:block text-gray-200">
+                    <div class="hidden sm:ml-6 sm:block text-white">
                         <div class="flex space-x-4">
                             <a v-for="item in navigation" :key="item.name" :href="'#' + item.id"
                                 class="header-link px-3 py-2 text-sm font-medium">
@@ -34,7 +34,7 @@
         <DisclosurePanel class="sm:hidden">
             <div class="space-y-1 px-2 pt-2 pb-3">
                 <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="'#' + item.id"
-                    class="header-link block px-3 py-2 text-base font-medium text-gray-200">
+                    class="header-link block px-3 py-2 text-base font-medium text-white">
                     {{ item.name }}</DisclosureButton>
             </div>
         </DisclosurePanel>
