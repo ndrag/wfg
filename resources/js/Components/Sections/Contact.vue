@@ -3,7 +3,7 @@
         <div class="relative mx-auto max-w-xl">
             <div class="text-center">
                 <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact us</h2>
-                <p class="mt-4 text-lg">For more information, please contact us using the form below.</p>
+                <p class="mt-4 text-lg">For more information, please send us a message using the form below.</p>
             </div>
 
             <div class="mt-12">
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <div class="sm:col-span-2">
-                        <VueRecaptcha id="recaptcha" :sitekey=siteKey :load-recaptcha-script="true"
+                        <VueRecaptcha v-show="!submitted" id="recaptcha" :sitekey=siteKey :load-recaptcha-script="true"
                             @verify="canSubmit=true" @expired="canSubmit=false" :class="{ 'opacity-50' : submitted }">
                         </VueRecaptcha>
                     </div>
