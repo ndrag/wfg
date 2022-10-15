@@ -4,28 +4,30 @@
 
   <!-- Hero section -->
   <section>
-    <div :id="sections[0].id"></div>
     <Hero />
   </section>
-  
+
+  <!-- Process -->
+  <section>
+    <div class="offset-section-anchor" :id="sections[0].id"></div>
+    <Process />
+  </section>
+
   <!-- About us -->
   <section>
-    <!-- <div class="section-anchor" :id="sections[1].id"></div> -->
+    <div class="offset-section-anchor" :id="sections[1].id"></div>
+    <About />
   </section>
-  
+
   <!-- Our team -->
   <section>
     <div class="offset-section-anchor" :id="sections[2].id"></div>
     <Team />
   </section>
-  
-  <!-- Technical advisors -->
-  <section>
-  </section>
-  
+
   <!-- Get in touch -->
   <section>
-    <div class="offset-section-anchor" :id="sections[4].id"></div>
+    <div class="offset-section-anchor" :id="sections[3].id"></div>
     <contact />
   </section>
 
@@ -41,14 +43,15 @@ import Header from '@/Layout/Header'
 import Footer from '@/Layout/Footer'
 
 import Hero from '@/Components/Sections/Hero'
+import Process from '@/Components/Sections/Process'
+import About from '@/Components/Sections/About'
 import Team from '@/Components/Sections/Team'
 import Contact from '@/Components/Sections/Contact'
 
 const sections = [
-  { name: 'About', id: 'about' },
   { name: 'Our process', id: 'process' },
+  { name: 'About', id: 'about' },
   { name: 'Team', id: 'team' },
-  { name: 'Advisors', id: 'advisors' },
   { name: 'Contact us', id: 'contact' },
 ]
 

@@ -36,7 +36,7 @@ class ContactPostRequest extends FormRequest
             'first_name.required' => 'Please provide your name.',
             'last_name.required' => 'Please provide your surname.',
             'email.required' => 'Please provide a valid email address.',
-            'message.required' => 'Please describe your purpose in contacting us.',
+            'message.required' => 'Please describe your reason for contacting us.',
             'message.min' => 'Please include a longer, more descriptive message so that we can provide a more helpful response.',
         ];
     }

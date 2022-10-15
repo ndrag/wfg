@@ -8,7 +8,7 @@
                         <span class="block font-bold text-gray-100">We work for good.</span>
                     </h1>
                     <p class="leading-10 mt-16 sm:mt-3 md:mt-5 text-2xl sm:text-md md:text-xl max-w-3xl text-gray-200">
-                        We build websites <span class="font-bold whitespace-nowrap pb-1 px-1 border-2 rounded-sm">for free</span> where you help us find the need.</p>
+                        We build websites <span class="font-bold whitespace-nowrap pb-1 px-1 pt-0.5 border-2 rounded-sm">for free</span> where you help us find the need.</p>
                 </div>
             </main>
         </div>

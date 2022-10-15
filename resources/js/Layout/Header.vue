@@ -31,7 +31,7 @@
         </div>
 
         <!-- Mobile panel -->
-        <DisclosurePanel class="sm:hidden bg-gradient-to-t from-gray-800">
+        <DisclosurePanel class="sm:hidden ">
             <div class="space-y-1 px-2 pt-2 pb-3">
                 <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="'#' + item.id"
                     class="header-link block px-3 py-2 text-base font-medium text-white">

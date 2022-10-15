@@ -1,5 +1,5 @@
 <template>
-    <div class="section-body overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 lg:py-24">
+    <div class="section-body overflow-hidden bg-gray-100 py-16 px-4 sm:px-6 lg:px-8 lg:py-24">
         <div class="relative mx-auto max-w-xl">
             <div class="text-center">
                 <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact us</h2>
