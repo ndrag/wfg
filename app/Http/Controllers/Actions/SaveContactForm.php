@@ -10,7 +10,7 @@ use App\Http\Requests\ContactPostRequest;
 
 class SaveContactForm extends Controller
 {
-    
+
     /**
      * __invoke
      *
@@ -21,7 +21,7 @@ class SaveContactForm extends Controller
     {
         Mail::to(env('MAIL_TO_ADDRESS'), 'Admin')
             ->send(new ContactFormSubmission($request->all()));
-        
+
         return Redirect::back();
     }
 }
