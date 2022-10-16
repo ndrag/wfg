@@ -103,7 +103,7 @@ const submitContactForm = () => {
             submitted.value = true
             Swal.fire(
                 'Success!',
-                'Your message has been received.',
+                'Thanks, your message has been received.',
                 'success'
             )
             contactButtonString.value = "Message Sent"

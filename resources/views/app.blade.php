@@ -9,7 +9,7 @@
     <title>Works for Good</title>
     <meta name="description" content="Works for Good is a collection of volunteer software professionals who build websites for free where you help us find the need.">
     <meta name="author" content="Nick Dragunow">
-    <meta property="og:title" content="works for good">
+    <meta property="og:title" content="Works for Good">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.worksforgood.info">
     <meta property="og:description" content="Works for Good is a collection of volunteer software professionals who build websites for free where you help us find the need.">
