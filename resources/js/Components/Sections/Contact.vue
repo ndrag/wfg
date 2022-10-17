@@ -2,7 +2,7 @@
     <div class="section-body">
         <div class="body-container">
             <div class="text-center">
-                <h2>Contact Us</h2>
+                <h2>Contact us</h2>
                 <p>For more information, please send us a message using the form below.</p>
             </div>
 

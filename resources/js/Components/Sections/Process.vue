@@ -2,7 +2,7 @@
     <div class="section-body bg-gray-100">
         <div class="body-container">
             <div class="text-center">
-                <h2>Our Process</h2>
+                <h2>Our process</h2>
                 <p>Works for good is a voluntary organization that brings area experts together with software developers to solve problems with technology.</p>
             </div>
             <div class="text-center">

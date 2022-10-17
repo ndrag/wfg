@@ -37,8 +37,8 @@ import Contact from '@/Components/Sections/Contact'
 
 const sections = [
   { name: 'About', id: 'about' },
-  { name: 'Our Process', id: 'process' },
-  { name: 'Contact Us', id: 'contact' },
+  { name: 'Our process', id: 'process' },
+  { name: 'Contact us', id: 'contact' },
 ]
 
 </script>
