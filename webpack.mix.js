@@ -1,5 +1,6 @@
 const path = require("path");
 const mix = require("laravel-mix");
+const CopyPlugin = require("copy-webpack-plugin");
 
 // Resolve Ziggy
 mix.alias({
@@ -15,6 +16,12 @@ mix.js("resources/js/app.js", "public/js")
                 "@": path.resolve(__dirname, "resources/js"),
             },
         },
+        plugins: [
+            new CopyPlugin({
+                patterns: [
+                    { from: "resources/assets", to: "public/assets" },
+                ],
+            }),]
     })
     .extract()
     .postCss("resources/css/app.css", "public/css", [require("tailwindcss")])

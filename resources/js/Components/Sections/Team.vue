@@ -53,7 +53,7 @@ const people = [
         name: 'Nick Dragunow',
         role: 'Web Developer',
         imageUrl:
-            '/images/headshots/nick-headshot.jpg',
+            '/assets/images/headshots/nick-headshot.jpg',
         bio: 'Nick Dragunow.',
         linkedinUrl: 'https://github.com/ndrag',
         country: 'Vancouver, Canada'
@@ -62,7 +62,7 @@ const people = [
         name: 'Jon Leonard',
         role: 'Business Analyst',
         imageUrl:
-            '/images/headshots/nick-headshot.jpg',
+            '/assets/images/headshots/nick-headshot.jpg',
         bio: 'Nick Dragunow.',
         linkedinUrl: 'https://github.com/ndrag',
         country: 'Christchurch, New Zealand'

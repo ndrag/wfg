@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="459.496 10.581 213.351 209.522" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="409.726" y1="92.604" x2="409.726" y2="258.493" id="gradient-2" gradientTransform="matrix(0.534355, -0.418089, 0.418089, 0.534355, 82.713448, 291.667572)">
+      <stop offset="0" style="stop-color: rgb(209, 118, 232);"/>
+      <stop offset="1" style="stop-color: rgb(89, 180, 233);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="409.726" y1="92.604" x2="409.726" y2="258.493" id="gradient-0" gradientTransform="matrix(0.839774, -0.542937, 0.531381, 0.821899, -71.709358, 268.493378)">
+      <stop offset="0" style="stop-color: rgb(255, 0, 0);"/>
+      <stop offset="1" style="stop-color: rgb(206, 146, 146);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="409.726" y1="92.604" x2="409.726" y2="258.493" id="gradient-4" gradientTransform="matrix(0.484692, 0.436944, -0.436944, 0.484692, 324.082332, -45.822789)">
+      <stop offset="0" style="stop-color: rgb(209, 118, 232);"/>
+      <stop offset="1" style="stop-color: rgb(89, 180, 233);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="409.726" y1="92.604" x2="409.726" y2="258.493" id="gradient-5" gradientTransform="matrix(0.736429, 0.676519, -0.606624, 0.660343, 264.801253, -189.387504)">
+      <stop offset="0" style="stop-color: rgb(255, 0, 0);"/>
+      <stop offset="1" style="stop-color: rgb(206, 146, 146);"/>
+    </linearGradient>
+  </defs>
+  <rect x="673.829" y="112.268" width="86.267" height="201.114" rx="15.594" ry="15.594" style="stroke-width: 0px; stroke-miterlimit: 1; stroke: rgb(255, 0, 0); fill: rgb(61, 59, 59);" transform="matrix(0.728642, 0.684895, -0.684895, 0.728642, 186.768041, -530.872696)"/>
+  <rect x="677.334" y="112.382" width="86.716" height="201.317" rx="15.798" ry="15.798" style="stroke-width: 0px; stroke-miterlimit: 1; stroke: rgb(255, 0, 0); fill: rgb(61, 59, 59);" transform="matrix(-0.713448, 0.700708, -0.700708, -0.713448, 1231.218176, -236.945838)"/>
+  <rect x="385.076" y="92.604" width="49.3" height="165.889" rx="9.732" ry="9.732" style="stroke: url(#gradient-0); fill: url(#gradient-2); stroke-width: 0px; stroke-miterlimit: 1;" transform="matrix(0.725927, 0.687771, -0.687771, 0.725927, 387.194378, -293.739816)"/>
+  <rect x="385.076" y="92.604" width="49.3" height="165.889" rx="11.553" ry="11.553" style="stroke-width: 0px; stroke-miterlimit: 1; fill: url(#gradient-4); stroke: url(#gradient-5);" transform="matrix(0.715104, -0.699018, 0.699018, 0.715104, 152.003758, 277.595772)"/>
+</svg>

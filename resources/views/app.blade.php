@@ -13,7 +13,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.worksforgood.info">
     <meta property="og:description" content="Works for Good is a collection of volunteer software professionals who build websites for free where you help us find the need.">
-    <meta property="og:image" content="/images/logo/violet/wfg-logo-darkest.svg">
+    <meta property="og:image" content="/assets/images/logo/violet/wfg-logo-darkest.svg">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP8MR3WZC9"></script>
     <script>

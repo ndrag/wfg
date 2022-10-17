@@ -15,8 +15,8 @@
                 <!-- Logo & desktop nav -->
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <a class="flex flex-shrink-0 items-center" href="#">
-                        <img class="block h-10 w-auto sm:hidden" src="/images/logo/violet/wfg-logo-wide-darkest.svg" alt="Works for Good" />
-                        <img class="hidden h-10 w-auto sm:block" src="/images/logo/violet/wfg-logo-darkest.svg" alt="Works for Good" />
+                        <img class="block h-10 w-auto sm:hidden" src="/assets/images/logo/violet/wfg-logo-wide-darkest.svg" alt="Works for Good" />
+                        <img class="hidden h-10 w-auto sm:block" src="/assets/images/logo/violet/wfg-logo-darkest.svg" alt="Works for Good" />
                     </a>
                     <div class="hidden sm:ml-6 sm:block text-white">
                         <div class="flex space-x-4">

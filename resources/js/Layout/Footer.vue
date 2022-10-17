@@ -3,9 +3,9 @@
         <div class="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
 
             <a href="#">
-                <img class="h-10 w-auto mx-auto hidden sm:block" src="/images/logo/violet/wfg-logo-wide-darkest.svg"
+                <img class="h-10 w-auto mx-auto hidden sm:block" src="/assets/images/logo/violet/wfg-logo-wide-darkest.svg"
                     alt="Works for Good" />
-                <img class="h-10 w-auto mx-auto sm:hidden" src="/images/logo/violet/wfg-logo-darkest.svg"
+                <img class="h-10 w-auto mx-auto sm:hidden" src="/assets/images/logo/violet/wfg-logo-darkest.svg"
                     alt="Works for Good" />
             </a>
 
