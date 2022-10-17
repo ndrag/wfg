@@ -113,7 +113,7 @@ const submitContactForm = () => {
             Submitted.value = true
             Toast.fire({
                 text: "Thanks! Your message has been received.",
-                iconHtml: '<img class="b-none h-24 w-auto mx-auto hidden sm:block" src="/assets/images/icons/wfg-check-dark.svg" alt="Works for Good" />',
+                iconHtml: '<img class="b-none h-24 w-auto mx-auto block" src="/assets/images/icons/wfg-check-dark.svg" alt="Works for Good" />',
                 iconColor: 'white'
             })
             ContactButtonString.value = "Message Sent"
@@ -134,7 +134,7 @@ Inertia.on('invalid', (event) => {
     event.preventDefault()
     Toast.fire({
         text: "Your message could not be sent. Please try again later.",
-        iconHtml: '<img class="b-none h-24 w-auto mx-auto hidden sm:block" src="assets/images/icons/wfg-times-dark.svg" alt="Your message could not be sent. Please try again later." />',
+        iconHtml: '<img class="b-none h-24 w-auto mx-auto block" src="assets/images/icons/wfg-times-dark.svg" alt="Your message could not be sent. Please try again later." />',
         iconColor: 'white',
     })
 })
