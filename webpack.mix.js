@@ -19,7 +19,7 @@ mix.js("resources/js/app.js", "public/js")
         plugins: [
             new CopyPlugin({
                 patterns: [
-                    { from: "resources/assets", to: "public/assets" },
+                    { from: "resources/assets", to: "assets" },
                 ],
             }),]
     })
