@@ -1,9 +1,9 @@
 <template>
     <div class="section-body bg-white">
-        <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
+        <div class="body-container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
                 <div class="space-y-5 sm:space-y-4">
-                    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Our Team</h2>
+                    <h2>Our Team</h2>
                     <p class="text-xl text-gray-500"></p>
                     <!-- TODO: Add a description above. -->
                 </div>

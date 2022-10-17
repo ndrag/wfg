@@ -9,7 +9,7 @@
                     alt="Works for Good" />
             </a>
 
-            <p class="mt-4 text-center text-base text-gray-400">&copy; {{new Date().getFullYear()}} Works for Good. All
+            <p class="text-center text-base text-gray-400">&copy; {{new Date().getFullYear()}} Works for Good. All
                 rights reserved.
             </p>
 

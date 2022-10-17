@@ -8,7 +8,7 @@
     }
 
     h2 {
-        @apply text-3xl mb-2.5;
+        @apply text-3xl font-bold tracking-tight sm:text-4xl mb-2.5;
     }
 
     h3 {
@@ -20,7 +20,7 @@
     }
 
     p {
-        @apply mb-2.5;
+        @apply mb-2.5 mt-2.5 text-lg;
     }
 }
 
@@ -30,7 +30,11 @@
     }
 
     .section-body {
-        @apply min-h-screen w-full;
+        @apply min-h-screen w-full overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 lg:py-24 text-gray-600;
+    }
+    
+    .body-container {
+        @apply relative mx-auto max-w-xl;
     }
 
     .responsive-item-spacing {
@@ -52,5 +56,9 @@
 
     .wfg-button {
         @apply items-center justify-center rounded-md bg-wfg-blue bg-gradient-to-b from-wfg-violet py-4 text-white text-xl  opacity-80 hover:opacity-100;
+    }
+
+    .input-error-ring {
+        @apply ring-2 ring-red-500;
     }
 }

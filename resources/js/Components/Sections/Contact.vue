@@ -1,9 +1,9 @@
 <template>
-    <div class="section-body overflow-hidden bg-gray-100 py-16 px-4 sm:px-6 lg:px-8 lg:py-24">
-        <div class="relative mx-auto max-w-xl">
+    <div class="section-body">
+        <div class="body-container">
             <div class="text-center">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact us</h2>
-                <p class="mt-4 text-lg">For more information, please send us a message using the form below.</p>
+                <h2>Contact Us</h2>
+                <p>For more information, please send us a message using the form below.</p>
             </div>
 
             <div class="mt-12">
@@ -14,7 +14,7 @@
                         <div class="mt-1">
                             <input type="text" name="first-name" id="first-name" autocomplete="given-name"
                                 class="wfg-form-field" :disabled="Submitted || Form.processing"
-                                v-model="Form.first_name" :class="{ 'ring-2 ring-red-500' : Form.errors.first_name }" />
+                                v-model="Form.first_name" :class="{ 'input-error-ring' : Form.errors.first_name }" />
                             <div v-if="Form.errors.first_name" class="mt-1 text-red-500">{{ Form.errors.first_name }}
                             </div>
                         </div>
@@ -24,7 +24,7 @@
                         <div class="mt-1">
                             <input type="text" name="last-name" id="last-name" autocomplete="family-name"
                                 class="wfg-form-field" :disabled="Submitted || Form.processing" v-model="Form.last_name"
-                                :class="{ 'ring-2 ring-red-500' : Form.errors.last_name }" />
+                                :class="{ 'input-error-ring' : Form.errors.last_name }" />
                             <div v-if="Form.errors.last_name" class="mt-1 text-red-500">{{ Form.errors.last_name }}
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                         <div class="mt-1">
                             <input id="email" name="email" type="email" autocomplete="email" class="wfg-form-field"
                                 :disabled="Submitted || Form.processing" v-model="Form.email"
-                                :class="{ 'ring-2 ring-red-500' : Form.errors.email }" />
+                                :class="{ 'input-error-ring' : Form.errors.email }" />
                             <div v-if="Form.errors.email" class="mt-1 text-red-500">{{ Form.errors.email }}</div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                         <div class="mt-1">
                             <textarea id="message" name="message" rows="4" class="wfg-form-field"
                                 :disabled="Submitted || Form.processing" v-model="Form.message"
-                                :class="{ 'ring-2 ring-red-500' : Form.errors.message }" />
+                                :class="{ 'input-error-ring' : Form.errors.message }" />
                             <div v-if="Form.errors.message" class="mt-1 text-red-500">{{ Form.errors.message }}</div>
                         </div>
                     </div>
