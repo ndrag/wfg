@@ -3,7 +3,7 @@
         <div class="body-container">
             <div class="text-center">
                 <h2>Contact us</h2>
-                <p>For more information, please send us a message using the form below.</p>
+                <p>Please send us a message for more information about our organization and what we can do for you.</p>
             </div>
 
             <div class="mt-12">
