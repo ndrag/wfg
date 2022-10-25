@@ -26,6 +26,7 @@ class ContactPostRequest extends FormRequest
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required',
+            'inquiry' => 'required',
             'message' => 'required|min:15',
         ];
     }
@@ -36,6 +37,7 @@ class ContactPostRequest extends FormRequest
             'first_name.required' => 'Please provide your name.',
             'last_name.required' => 'Please provide your surname.',
             'email.required' => 'Please provide a valid email address.',
+            'inquiry.required' => 'Please include an inquiry type.',
             'message.required' => 'Please describe your purpose in contacting us.',
             'message.min' => 'Please include a longer, more descriptive message.',
         ];

@@ -3,4 +3,5 @@
 
 <p><b>Name:</b> {{ $formFields['first_name'] . ' ' . $formFields['last_name'] }}</p>
 <p><b>Email:</b> {{ $formFields['email'] }}</p>
+<p><b>Inquiry Type:</b> {{ $formFields['inquiry'] }}</p>
 <p><b>Message:</b> {{ $formFields['message'] }}</p>

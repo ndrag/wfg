@@ -14,7 +14,7 @@
                         <div class="mt-1">
                             <input type="text" name="first-name" id="first-name" autocomplete="given-name"
                                 class="wfg-form-field" :disabled="Submitted || Form.processing"
-                                v-model="Form.first_name" :class="{ 'input-error-ring' : Form.errors.first_name }" />
+                                v-model="Form.first_name" :class="{ 'input-error-ring': Form.errors.first_name }" />
                             <div v-if="Form.errors.first_name" class="mt-1 text-red-500">{{ Form.errors.first_name }}
                             </div>
                         </div>
@@ -24,19 +24,62 @@
                         <div class="mt-1">
                             <input type="text" name="last-name" id="last-name" autocomplete="family-name"
                                 class="wfg-form-field" :disabled="Submitted || Form.processing" v-model="Form.last_name"
-                                :class="{ 'input-error-ring' : Form.errors.last_name }" />
+                                :class="{ 'input-error-ring': Form.errors.last_name }" />
                             <div v-if="Form.errors.last_name" class="mt-1 text-red-500">{{ Form.errors.last_name }}
                             </div>
                         </div>
                     </div>
+
                     <div class="sm:col-span-2">
                         <label for="email" class="block text-sm font-medium">Email</label>
                         <div class="mt-1">
                             <input id="email" name="email" type="email" autocomplete="email" class="wfg-form-field"
                                 :disabled="Submitted || Form.processing" v-model="Form.email"
-                                :class="{ 'input-error-ring' : Form.errors.email }" />
+                                :class="{ 'input-error-ring': Form.errors.email }" />
                             <div v-if="Form.errors.email" class="mt-1 text-red-500">{{ Form.errors.email }}</div>
                         </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="inquiry-type" class="block text-sm font-medium">I'm inquiring about</label>
+                        <Listbox v-model="Form.inquiry">
+                            <div class="relative mt-1">
+                                <ListboxButton
+                                    id="inquiry-type"
+                                    class="relative w-full cursor-default wfg-form-field text-left border-gray-300 border-2 shadow-none"
+                                    :class="{ 'input-error-ring': Form.errors.inquiry }">
+                                    <span class="block truncate">{{ Form.inquiry }}</span>
+                                    <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                                        <ChevronUpDownIcon class="h-5 w-5 text-gray-600" aria-hidden="true" />
+                                    </span>
+                                </ListboxButton>
+                                <div v-if="Form.errors.inquiry" class="mt-1 text-red-500">{{ Form.errors.inquiry }}</div>
+
+
+                                <transition leave-active-class="transition duration-100 ease-in"
+                                    leave-from-class="opacity-100" leave-to-class="opacity-0">
+                                    <ListboxOptions
+                                        class="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                                        <ListboxOption v-slot="{ active, selected }" v-for="inquiryType in inquiryTypes"
+                                            :key="inquiryType" :value="inquiryType">
+                                            <li :class="[
+                                                active ? 'bg-wfg-violet text-white' : 'text-gray-600',
+                                                'relative cursor-default select-none py-2 pl-10 pr-4',
+                                            ]">
+                                                <span :class="[
+                                                    selected ? 'font-medium' : 'font-normal',
+                                                    'block truncate',
+                                                ]">{{ inquiryType }}</span>
+                                                <span v-if="selected"
+                                                    class="absolute inset-y-0 left-0 flex items-center pl-3 text-wfg-blue font-extrabold">
+                                                    <CheckIcon class="h-5 w-5" aria-hidden="true" />
+                                                </span>
+                                            </li>
+                                        </ListboxOption>
+                                    </ListboxOptions>
+                                </transition>
+                            </div>
+                        </Listbox>
                     </div>
 
                     <div class="sm:col-span-2">
@@ -44,19 +87,20 @@
                         <div class="mt-1">
                             <textarea id="message" name="message" rows="4" class="wfg-form-field"
                                 :disabled="Submitted || Form.processing" v-model="Form.message"
-                                :class="{ 'input-error-ring' : Form.errors.message }" />
+                                :class="{ 'input-error-ring': Form.errors.message }" />
                             <div v-if="Form.errors.message" class="mt-1 text-red-500">{{ Form.errors.message }}</div>
                         </div>
                     </div>
                     <div class="sm:col-span-2">
                         <VueRecaptcha v-show="!Submitted" id="recaptcha" :sitekey=SiteKey :load-recaptcha-script="true"
-                            @verify="CanSubmit=true" @expired="CanSubmit=false" :class="{ 'opacity-50' : Submitted }">
+                            @verify="CanSubmit = true" @expired="CanSubmit = false"
+                            :class="{ 'opacity-50': Submitted }">
                         </VueRecaptcha>
                     </div>
                     <div class="sm:col-span-2">
                         <button type="submit" :disabled="Form.processing || Submitted || !CanSubmit"
                             class="inline-flex w-full wfg-button h-14 disabled:pointer-events-none"
-                            :class="{'opacity-50' : Submitted || !CanSubmit}">
+                            :class="{ 'opacity-50': Submitted || !CanSubmit }">
                             <span v-show="Form.processing" class="inline-flex w-full justify-center space-x-4">
                                 <div class="w-2 h-2 bg-white rounded-full animate-ping" style="animation-delay: 0s">
                                 </div>
@@ -82,16 +126,34 @@ import { useForm } from '@inertiajs/inertia-vue3'
 import { VueRecaptcha } from 'vue-recaptcha'
 import Swal from 'sweetalert2'
 import { Inertia } from '@inertiajs/inertia'
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
+
+import {
+    Listbox,
+    ListboxLabel,
+    ListboxButton,
+    ListboxOptions,
+    ListboxOption,
+} from '@headlessui/vue'
 
 const SiteKey = '6Lcz7H8iAAAAAN0eSjhOjSFKFa6FR3zmR3UU1iyb'
 
 const CanSubmit = ref(false)
 
+const inquiryTypes = [
+    'Becoming a customer',
+    'Becoming a team member',
+    'Becoming a technical advisor',
+    'Something else',
+]
+
 const Form = useForm({
     first_name: null,
     last_name: null,
+    contact_type: null,
     email: null,
     message: null,
+    inquiry: ref(inquiryTypes[0]),
 })
 
 const ContactButtonString = ref('Submit')
