@@ -140,8 +140,8 @@ const SiteKey = '6Lcz7H8iAAAAAN0eSjhOjSFKFa6FR3zmR3UU1iyb'
 
 const CanSubmit = ref(false)
 
-const inquiryTypes = [
-    'receiving support for my organization',
+const inquiryTypes = [  
+    'support for an organization or area',
     'becoming a team member',
     'becoming a technical advisor',
 ]
