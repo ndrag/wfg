@@ -141,10 +141,9 @@ const SiteKey = '6Lcz7H8iAAAAAN0eSjhOjSFKFa6FR3zmR3UU1iyb'
 const CanSubmit = ref(false)
 
 const inquiryTypes = [
-    'Becoming a customer',
-    'Becoming a team member',
-    'Becoming a technical advisor',
-    'Something else',
+    'receiving support for my organization',
+    'becoming a team member',
+    'becoming a technical advisor',
 ]
 
 const Form = useForm({
