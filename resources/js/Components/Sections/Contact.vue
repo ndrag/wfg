@@ -91,10 +91,9 @@
                             <div v-if="Form.errors.message" class="mt-1 text-red-500">{{ Form.errors.message }}</div>
                         </div>
                     </div>
-                    <div class="sm:col-span-2">
-                        <VueRecaptcha :disabled="Submitted || Form.processing" id="recaptcha" :sitekey=SiteKey :load-recaptcha-script="true"
-                            @verify="CanSubmit = true" @expired="CanSubmit = false"
-                            :class="{ 'opacity-50': Submitted }">
+                    <div class="sm:col-span-2" :class="Submitted ? 'h-24' : ''">
+                        <VueRecaptcha v-if="!Submitted" class="h-24 pt-2" :disabled="Submitted || Form.processing" id="recaptcha" :sitekey=SiteKey :load-recaptcha-script="true"
+                            @verify="CanSubmit = true" @expired="CanSubmit = false">
                         </VueRecaptcha>
                     </div>
                     <div class="sm:col-span-2">

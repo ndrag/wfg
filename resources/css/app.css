@@ -30,7 +30,7 @@
     }
 
     .section-body {
-        @apply min-h-screen w-full overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 lg:py-24 text-gray-600;
+        @apply flex justify-center items-center min-h-screen w-full overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 lg:py-24 text-gray-600;
     }
     
     .body-container {
