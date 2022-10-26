@@ -6,7 +6,7 @@
                 <div>
                     <h3 class="pt-5 font-bold">What do we do?</h3>
                     <EllipsisHorizontalIcon class="h-3 w-3 m-auto" aria-hidden="true" />
-                    <p>Works for Good is a not-for-profit. We build free websites for individuals and organizations that do good in the world.</p>
+                    <p>Works for Good is a not-for-profit. We build free websites for organizations and individuals that do good in the world.</p>
                     <p>We help people from all walks of life. You don't need to understand technology to work with us.</p> 
                     <p>All you need is a problem and a cause worth getting behind.</p> 
                 </div>
