@@ -46,7 +46,7 @@
                             <div class="relative mt-1">
                                 <ListboxButton
                                     id="inquiry-type"
-                                    class="relative w-full cursor-default wfg-form-field text-left border-gray-300 border-2 shadow-none"
+                                    class="relative w-full cursor-default wfg-form-field text-left border-gray-200 bg-gray-100 border-2 shadow-none"
                                     :class="{ 'input-error-ring': Form.errors.inquiry }">
                                     <span class="block truncate">{{ Form.inquiry }}</span>
                                     <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
@@ -63,7 +63,7 @@
                                         <ListboxOption v-slot="{ active, selected }" v-for="inquiryType in inquiryTypes"
                                             :key="inquiryType" :value="inquiryType">
                                             <li :class="[
-                                                active ? 'bg-wfg-violet text-white' : 'text-gray-600',
+                                                active ? 'bg-wfg-violet opacity-70 text-white' : 'text-gray-600',
                                                 'relative cursor-default select-none py-2 pl-10 pr-4',
                                             ]">
                                                 <span :class="[
@@ -71,7 +71,7 @@
                                                     'block truncate',
                                                 ]">{{ inquiryType }}</span>
                                                 <span v-if="selected"
-                                                    class="absolute inset-y-0 left-0 flex items-center pl-3 text-wfg-blue font-extrabold">
+                                                    class="absolute inset-y-0 left-0 flex items-center pl-3 text-wfg-violet font-extrabold">
                                                     <CheckIcon class="h-5 w-5" aria-hidden="true" />
                                                 </span>
                                             </li>
