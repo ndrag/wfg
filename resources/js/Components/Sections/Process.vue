@@ -26,7 +26,7 @@
                 <SectionNumber value="4"/>
                 <h3 class="pt-5 font-bold">We'll host and support it</h3>
                 <p>We'll make the site available on the internet, monitor its performance, and make sure it runs well.</p>
-                <p>Hosting a website can be expensive. If the cost gets too high,  we may ask you to pay a small amount towards them after the first year.</p>
+                <p>Hosting a website can be expensive. If the costs get too high,  we may ask you to pay a small amount towards them after the first year.</p>
             </div>
             <div class="text-center py-5">
                 <SectionNumber value="&amp;"/>
