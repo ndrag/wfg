@@ -3,7 +3,7 @@
         <div class="body-container">
             <div class="text-center">
                 <h2>Contact us</h2>
-                <p>Send as a message and we'll be in contact if we think we can help.</p>
+                <p>Send as a message and we'll contact you if we think we can help.</p>
             </div>
 
             <div class="mt-12">
@@ -92,7 +92,7 @@
                         </div>
                     </div>
                     <div class="sm:col-span-2">
-                        <VueRecaptcha v-show="!Submitted" id="recaptcha" :sitekey=SiteKey :load-recaptcha-script="true"
+                        <VueRecaptcha :disabled="Submitted || Form.processing" id="recaptcha" :sitekey=SiteKey :load-recaptcha-script="true"
                             @verify="CanSubmit = true" @expired="CanSubmit = false"
                             :class="{ 'opacity-50': Submitted }">
                         </VueRecaptcha>
