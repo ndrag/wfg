@@ -1,5 +1,6 @@
 import { createApp, h } from "vue";
 import { createInertiaApp, Link, Head } from "@inertiajs/inertia-vue3";
+import axios from 'axios'
 
 import { ZiggyVue } from "./ziggy";
 import { Ziggy } from "./ziggy";

@@ -44,8 +44,7 @@
                         <label for="inquiry-type" class="block text-sm font-medium">I'm inquiring about</label>
                         <Listbox v-model="Form.inquiry">
                             <div class="relative mt-1">
-                                <ListboxButton
-                                    id="inquiry-type"
+                                <ListboxButton id="inquiry-type"
                                     class="relative w-full cursor-default wfg-form-field text-left border-gray-200 bg-gray-50 border-2 shadow-none"
                                     :class="{ 'input-error-ring': Form.errors.inquiry }">
                                     <span class="block truncate">{{ Form.inquiry }}</span>
@@ -53,7 +52,8 @@
                                         <ChevronUpDownIcon class="h-5 w-5 text-gray-600" aria-hidden="true" />
                                     </span>
                                 </ListboxButton>
-                                <div v-if="Form.errors.inquiry" class="mt-1 text-red-500">{{ Form.errors.inquiry }}</div>
+                                <div v-if="Form.errors.inquiry" class="mt-1 text-red-500">{{ Form.errors.inquiry }}
+                                </div>
 
 
                                 <transition leave-active-class="transition duration-100 ease-in"
@@ -92,8 +92,9 @@
                         </div>
                     </div>
                     <div class="sm:col-span-2" :class="Submitted ? 'h-24' : ''">
-                        <VueRecaptcha v-if="!Submitted" class="h-24 pt-2" :disabled="Submitted || Form.processing" id="recaptcha" :sitekey=SiteKey :load-recaptcha-script="true"
-                            @verify="CanSubmit = true" @expired="CanSubmit = false">
+                        <VueRecaptcha v-if="!Submitted" class="h-24 pt-2" :disabled="Submitted || Form.processing"
+                            id="recaptcha" ref="recaptcha" :sitekey=SiteKey :load-recaptcha-script="true"
+                            @verify="handleRecaptchaValidation" @expired="CanSubmit = false">
                         </VueRecaptcha>
                     </div>
                     <div class="sm:col-span-2">
@@ -134,16 +135,19 @@ import {
     ListboxOptions,
     ListboxOption,
 } from '@headlessui/vue'
+import axios from 'axios'
 
+const recaptcha  = ref(null)
 const SiteKey = '6Lcz7H8iAAAAAN0eSjhOjSFKFa6FR3zmR3UU1iyb'
-
 const CanSubmit = ref(false)
 
-const inquiryTypes = [  
+
+const inquiryTypes = [
     'Support for myself or my organization',
     'Becoming a team member',
     'Becoming a technical advisor',
 ]
+
 
 const Form = useForm({
     first_name: null,
@@ -165,6 +169,22 @@ const Toast = Swal.mixin({
     timerProgressBar: true,
 
 })
+
+const handleRecaptchaValidation = async (value) => {
+    try {
+        await axios.post(route('validate-recaptcha-response'), {
+            "recaptcha_validation_token": value
+        })
+        CanSubmit.value = true
+    } catch (err) {
+        Toast.fire({
+            text: err.response.data.message,
+            iconHtml: `<img class="b-none h-24 w-auto mx-auto block" src="assets/images/icons/wfg-times-dark.svg" alt="${ err.response.data.message}" />`,
+            iconColor: 'white',
+        })
+        recaptcha.value.reset()
+    }
+}
 
 const submitContactForm = () => {
     Form.post(route('save-contact-form'), {

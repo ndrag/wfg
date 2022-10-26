@@ -19,7 +19,6 @@ class SaveContactForm extends Controller
      */
     public function __invoke(ContactPostRequest $request)
     {
-        
         Mail::to(env('MAIL_TO_ADDRESS'), 'Admin')
             ->send(new ContactFormSubmission($request->all()));
 
