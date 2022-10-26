@@ -46,7 +46,7 @@
                             <div class="relative mt-1">
                                 <ListboxButton
                                     id="inquiry-type"
-                                    class="relative w-full cursor-default wfg-form-field text-left border-gray-200 bg-gray-100 border-2 shadow-none"
+                                    class="relative w-full cursor-default wfg-form-field text-left border-gray-200 bg-gray-50 border-2 shadow-none"
                                     :class="{ 'input-error-ring': Form.errors.inquiry }">
                                     <span class="block truncate">{{ Form.inquiry }}</span>
                                     <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
