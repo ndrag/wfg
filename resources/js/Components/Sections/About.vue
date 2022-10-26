@@ -3,7 +3,7 @@
         <div class="body-container">
             <div class="text-center">
                 <h2 class="mb-4">About</h2>
-                <div class="mt-10">
+                <div>
                     <h3 class="pt-5 font-bold">What do we do?</h3>
                     <EllipsisHorizontalIcon class="h-3 w-3 m-auto" aria-hidden="true" />
                     <p>Works for Good is a not-for-profit. We build free websites for individuals and organizations that do good in the world.</p>
