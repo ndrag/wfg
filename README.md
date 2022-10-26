@@ -1,10 +1,8 @@
 ---
 Title: Works for Good
 Author: Nicholas Dragunow
-Status: Pre-release
+Status: 1.0
 ---
-
-***In early development! While the architecture is complete, the front-end has yet to be fully designed or implemented.***
 
 # Works for Good
 
