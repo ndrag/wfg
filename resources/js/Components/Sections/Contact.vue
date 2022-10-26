@@ -63,7 +63,7 @@
                                         <ListboxOption v-slot="{ active, selected }" v-for="inquiryType in inquiryTypes"
                                             :key="inquiryType" :value="inquiryType">
                                             <li :class="[
-                                                active ? 'bg-wfg-violet opacity-70 text-white' : 'text-gray-600',
+                                                active ? 'bg-wfg-violet opacity-80 text-white' : 'text-gray-600',
                                                 'relative cursor-default select-none py-2 pl-10 pr-4',
                                             ]">
                                                 <span :class="[

@@ -20,7 +20,7 @@
     }
 
     p {
-        @apply mb-2.5 mt-2.5 text-lg;
+        @apply mb-4 mt-4 text-lg;
     }
 }
 

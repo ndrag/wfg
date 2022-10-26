@@ -4,15 +4,15 @@
             <div class="text-center">
                 <h2 class="mb-4">About</h2>
                 <div>
-                    <h3 class="pt-5 font-bold">Who are we?</h3>
-                    <EllipsisHorizontalIcon class="h-3 w-3 m-auto" aria-hidden="true" />
+                    <h3 class="pt-5 font-bold">What do we do?</h3>
+                    <CogIcon class="h-5 w-5 m-auto" aria-hidden="true" />
                     <p>Works for Good is a not-for-profit. We build free websites for organizations and individuals that do good in the world.</p>
                     <p>We help people from all walks of life. You don't need to understand technology to work with us.</p> 
                     <p>All you need is a problem and a cause worth getting behind.</p> 
                 </div>
                 <div class="mt-10">
                     <h3 class="pt-5 font-bold">Who works for good?</h3>
-                    <EllipsisHorizontalIcon class="h-3 w-3 m-auto" aria-hidden="true" />
+                    <UserGroupIcon class="h-5 w-5 m-auto" aria-hidden="true" />
                     <p>We pair software developers with experienced technical advisors. They work together to build your website.</p>
                     <p>As they help you, our volunteer team members build knowledge, experience, and positive industry relationships.</p>
                     <p>Our technical leads will keep in contact with you, manage the project, and help develop a top-quality solution.</p>
@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import { EllipsisHorizontalIcon } from '@heroicons/vue/20/solid';
+import { CogIcon, EllipsisHorizontalIcon, UserGroupIcon } from '@heroicons/vue/20/solid';
 
 
 </script>
