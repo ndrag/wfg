@@ -9,7 +9,7 @@ Status: 1.0
 
 The homepage for Works for Good, a not-for-profit creating free web-based tools for organizations and industries that make a difference. 
 
-This site will also form the template for future Laravel + Vue (via Inertia) AWS-hosted websites. 
+This site also forms the template for future Laravel + Vue (via Inertia) AWS-hosted websites. 
 
 ## Tech Stack
 - Laravel  9
