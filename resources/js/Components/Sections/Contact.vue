@@ -3,7 +3,7 @@
         <div class="body-container">
             <div class="text-center">
                 <h2>Contact us</h2>
-                <p>Please send us a message for more information about our organization and what we can do for you.</p>
+                <p>Send as a message and we'll be in contact if we think we can help.</p>
             </div>
 
             <div class="mt-12">
@@ -141,7 +141,7 @@ const SiteKey = '6Lcz7H8iAAAAAN0eSjhOjSFKFa6FR3zmR3UU1iyb'
 const CanSubmit = ref(false)
 
 const inquiryTypes = [  
-    'support for an organization or area',
+    'support for myself or my organization',
     'becoming a team member',
     'becoming a technical advisor',
 ]
