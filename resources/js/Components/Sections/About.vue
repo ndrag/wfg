@@ -4,7 +4,6 @@
             <div class="text-center">
                 <h2 class="mb-4">About</h2>
                 <div>
-                    <h3 class="pt-5 font-bold">What do we do?</h3>
                     <p>Works for Good is a not-for-profit that builds free websites for organizations and individuals that do good in the world.</p>
                     <p>We help people from all walks of life. You don't need to understand technology to work with us.</p> 
                     <p>All you need is a problem and a cause worth getting behind.</p> 
