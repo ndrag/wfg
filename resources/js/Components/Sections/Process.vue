@@ -5,35 +5,33 @@
                 <h2>Our process</h2>
             </div>
             <div class="text-center py-5">
-                <SectionNumber value="1"/>
-                <h3 class="pt-5 font-bold">Tell us your problem</h3>
-                <p>Contact us using the form below. Let us know who you are, what you do, and how you think a website might help you or your organization.</p>
+                <SectionNumber value="1" />
+                <h3 class="pt-5 font-bold">Talk to us.</h3>
+                <p>Let us know who you are, what you do, and how a website
+                    might help you or your organization.</p>
+                <p>If we think we can help, one of our team members will be in contact to arrange a call or video meeting.
+                    There we'll discuss the problem, explain your options, and suggest a solution.</p>
             </div>
             <div class="text-center py-5">
-                <SectionNumber value="2"/>
-                <h3 class="pt-5 font-bold">We'll design a solution</h3>
-                <p>If we think we can help, one of our team members will contact you to arrange a call or video meeting.</p>
-                <p>There, we'll discuss the problem, explain your options, and suggest a solution.</p>
-                <p>This could range from a simple, one-page website to a complex tool to solve a serious organizational challenge.</p>
+                <SectionNumber value="2" />
+                <h3 class="pt-5 font-bold">We'll design and build your website.</h3>
+                <p>This might be a simple landing page or a complex tool to solve a serious organizational
+                    challenge.</p>
+                <p>Your feedback is important. We'll work closely with you to ensure we're building exactly what you
+                    need.</p>
             </div>
             <div class="text-center py-5">
-                <SectionNumber value="3"/>
-                <h3 class="pt-5 font-bold">Together, we'll build it</h3>
-                <p>We'll work closely with you to refine and then build that solution.</p>
-                <p>Your feedback is important: We'll be in constant contact to ensure we're building exactly what you need.</p>
+                <SectionNumber value="3" />
+                <h3 class="pt-5 font-bold">We'll host it and provide support.</h3>
+                <p>We'll make the site available on the internet and monitor it to ensure it runs well.</p>
+                <p class="italic">Hosting a website can be expensive. If the costs get too high, we may ask you to pay a small amount
+                    towards them after the first year.</p>
             </div>
             <div class="text-center py-5">
-                <SectionNumber value="4"/>
-                <h3 class="pt-5 font-bold">We'll then provide hosting and support</h3>
-                <p>We'll make the site available on the internet, monitor its performance, and make sure it runs well.</p>
-                <p>Hosting a website can be expensive. If the costs get too high,  we may ask you to pay a small amount towards them after the first year.</p>
-            </div>
-            <div class="text-center py-5">
-                <SectionNumber value="&amp;"/>
-                <h3 class="pt-5 font-bold">The website is yours</h3>
-                <p>You own the website, the code, and everything else associated with it.</p>
-                <p>If you want to take it further, we'll help you find a software company to take over development.</p>
-                <p>We'll stay involved as advisors to make sure things run smoothly.</p>
+                <SectionNumber value="&amp;" />
+                <h3 class="pt-5 font-bold">...and it's all yours.</h3>
+                <p>You own the website, the code, and everything associated with it.</p>
+                <p>If you want to take it further, we'll help you find a software company to take over development. We'll stay involved as advisors to make sure things run smoothly.</p>
             </div>
         </div>
     </div>

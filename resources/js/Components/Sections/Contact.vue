@@ -3,7 +3,7 @@
         <div class="body-container">
             <div class="text-center">
                 <h2>Contact us</h2>
-                <p>Send as a message and we'll contact you if we think we can help.</p>
+                <p>Send us a message and we'll get back to you if we think we can help.</p>
             </div>
 
             <div class="mt-12">
@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="sm:col-span-2">
-                        <label for="inquiry-type" class="block text-sm font-medium">I'm inquiring about</label>
+                        <label for="inquiry-type" class="block text-sm font-medium">I'm inquiring about...</label>
                         <Listbox v-model="Form.inquiry">
                             <div class="relative mt-1">
                                 <ListboxButton id="inquiry-type"
@@ -63,7 +63,7 @@
                                         <ListboxOption v-slot="{ active, selected }" v-for="inquiryType in inquiryTypes"
                                             :key="inquiryType" :value="inquiryType">
                                             <li :class="[
-                                                active ? 'bg-wfg-violet opacity-80 text-white' : 'text-gray-600',
+                                                active ? 'bg-wfg-blue opacity-80 text-white' : 'text-gray-600',
                                                 'relative cursor-default select-none py-2 pl-10 pr-4',
                                             ]">
                                                 <span :class="[
@@ -143,9 +143,8 @@ const CanSubmit = ref(false)
 
 
 const inquiryTypes = [
-    'Support for myself or my organization',
-    'Becoming a team member',
-    'Becoming a technical advisor',
+    'a website or tool for myself or my organization',
+    'becoming a team member'
 ]
 
 
@@ -196,7 +195,7 @@ const submitContactForm = () => {
                 iconHtml: '<img class="b-none h-24 w-auto mx-auto block" src="/assets/images/icons/wfg-check-dark.svg" alt="Works for Good" />',
                 iconColor: 'white'
             })
-            ContactButtonString.value = "Message Sent"
+            ContactButtonString.value = "Thanks!"
         },
         onError: () => { // Note - this only catches validation errors, not server-side issues. See below for details.
             ContactButtonString.value = "Submit"

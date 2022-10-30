@@ -14,7 +14,7 @@
             </p>
 
             <div class="mt-4 mb-4 flex justify-center space-x-6">
-                <a class="text-gray-400 hover:text-gray-200" href="https://github.com/ndrag/wfg">
+                <a class="text-gray-400 hover:text-gray-200" target="_blank" href="https://github.com/ndrag/wfg">
                     <span class="sr-only">GitHub</span>
                     <component :is="GitHubIcon" class="h-6 w-6" aria-hidden="true" />
                 </a>
