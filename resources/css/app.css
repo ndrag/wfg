@@ -34,7 +34,7 @@
     }
     
     .body-container {
-        @apply relative mx-auto max-w-xl;
+        @apply relative mx-auto max-w-2xl;
     }
 
     .responsive-item-spacing {

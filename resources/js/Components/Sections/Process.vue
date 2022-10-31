@@ -9,7 +9,7 @@
                 <h3 class="pt-5 font-bold">Talk to us.</h3>
                 <p>Let us know who you are, what you do, and how a website
                     might help you or your organization.</p>
-                <p>If we think we can help, one of our team members will be in contact to arrange a call or video meeting.
+                <p>If we think we can help, one of our team members will get in contact to arrange a call or video meeting.
                     There we'll discuss the problem, explain your options, and suggest a solution.</p>
             </div>
             <div class="text-center py-5">
@@ -25,7 +25,7 @@
                 <h3 class="pt-5 font-bold">We'll host it and provide support.</h3>
                 <p>We'll make the site available on the internet and monitor it to ensure it runs well.</p>
                 <p class="italic">Hosting a website can be expensive. If the costs get too high, we may ask you to pay a small amount
-                    towards them after the first year.</p>
+                    towards these after the first year.</p>
             </div>
             <div class="text-center py-5">
                 <SectionNumber value="&amp;" />

@@ -1,9 +1,9 @@
 <template>
-    <div class="section-body">
+    <div class="section-body bg-gray-100">
         <div class="body-container">
             <div class="text-center">
                 <h2>Contact us</h2>
-                <p>Send us a message and we'll get back to you if we think we can help.</p>
+                <p>We'd love to hear from you. Tell us your story we'll get back to you if we think we can help.</p>
             </div>
 
             <div class="mt-12">

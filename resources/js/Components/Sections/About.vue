@@ -11,16 +11,9 @@
                 <div>
                     <h3 class="pt-5 font-bold">Our people</h3>
                     <p>We pair software developers with experienced technical advisors. They work together to build your website.</p>
-                    <p>As they help you, our volunteer team members build knowledge, experience, and positive industry relationships.</p>
                     <p>Our technical leads will keep in contact with you, manage the project, and help develop a top-quality solution.</p>
                 </div>
             </div>
         </div>
     </div>
 </template>
-
-<script setup>
-import { CogIcon, EllipsisHorizontalIcon, UserGroupIcon } from '@heroicons/vue/20/solid';
-
-
-</script>
