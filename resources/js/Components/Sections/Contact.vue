@@ -144,6 +144,7 @@ const CanSubmit = ref(false)
 
 const inquiryTypes = [
     'a website or tool for myself or my organization',
+    'technical advice or advocacy',
     'becoming a team member'
 ]
 
