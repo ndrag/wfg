@@ -6,8 +6,8 @@
                 <div>
                     <h3 class="pt-5 font-bold">We do it because you're worth it</h3>
                     <p>Technology is expensive. It's also a powerful enabler for good.</p>
-                    <p>It's our goal to bridge the gap between intentions and capability. We choose clients who want to
-                        improve the world and could do so better with a technical helping hand.</p>
+                    <p>It's our goal to bridge the gap between intention and capability. We choose clients who want to
+                        improve the world and who could do so better with a technical helping hand.</p>
                     <p>We work for you if we believe in what you do and want to see you achieve it.</p>
 
                 </div>
