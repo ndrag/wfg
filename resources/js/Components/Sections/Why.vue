@@ -8,7 +8,7 @@
                     <p>Technology is expensive. It's also a powerful enabler for good.</p>
                     <p>It's our goal to bridge the gap between intentions and capability. We choose clients who want to
                         improve the world and could do so better with a technical helping hand.</p>
-                    <p>We work for you because we believe in what you do and want to see you achieve it.</p>
+                    <p>We work for you if we believe in what you do and want to see you achieve it.</p>
 
                 </div>
                 <div>
