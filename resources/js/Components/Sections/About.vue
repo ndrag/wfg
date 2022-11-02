@@ -10,7 +10,7 @@
                 </div>
                 <div>
                     <h3 class="pt-5 font-bold">Our people</h3>
-                    <p>We pair software developers with experienced technical advisors. They work together to build your website.</p>
+                    <p>We pair volunteer software developers with experienced technical advisors. They work together to build your website.</p>
                     <p>Our technical leads will keep in contact with you, manage the project, and help develop a top-quality solution.</p>
                 </div>
             </div>
