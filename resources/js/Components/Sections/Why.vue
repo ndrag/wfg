@@ -12,7 +12,7 @@
 
                 </div>
                 <div>
-                    <h3 class="pt-5 font-bold">We're worth it, too</h3>
+                    <h3 class="pt-5 font-bold">Our people are, too</h3>
                     <p>Our volunteers want to be here. We provide technical people with a platform to give back to the
                         world by applying their valuable
                         skills altruistically. </p>
